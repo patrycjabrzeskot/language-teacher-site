@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Trans, I18nProvider, withI18n } from "@lingui/react"
 
 const NotFoundPage = () => (
   <Layout>
@@ -12,4 +13,4 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default NotFoundPage
+export default withI18n()(NotFoundPage)

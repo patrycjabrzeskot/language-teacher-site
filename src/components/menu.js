@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { Trans } from "@lingui/macro"
+import { Trans, withI18n } from "@lingui/react"
 
 const Container = styled.div`
-  padding-top: 15px;
+  ${"" /* padding-top: 15px; */}
   box-shadow: 0px 0px 5px #c9c3c3;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.5);
@@ -89,4 +89,5 @@ const Menu = ({ refs }) => {
   )
 }
 
-export default Menu
+//export default withI18n(Menu)
+export default withI18n()(Menu)

@@ -3,12 +3,17 @@
 
 const languages = ["en", "pl", "sw", "no"]
 
-async function loadMessages() {
+async function loadMessagesen() {
   return await import(`@lingui/loader!./locales/en/messages.po`)
 }
 
+async function loadMessagespl() {
+  return await import(`@lingui/loader!./locales/pl/messages.po`)
+}
+
 const catalogs = {
-  en: { messages: loadMessages },
+  en: { messages: loadMessagesen },
+  pl: { messages: loadMessagespl },
   //   pl: { messages: require("./locales/pl/messages.po") },
   //   sw: { messages: require("./locales/sw/messages.po") },
   //   no: { messages: require("./locales/no/messages.po") },

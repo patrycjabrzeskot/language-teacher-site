@@ -12,13 +12,13 @@ import Menu from "./menu"
 import "./layout.css"
 import Welcome from "./sections/welcome"
 import LanguageSwitch from "./LanguageSwitch"
-// import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
-import { languages, prefix, deprefix, langFromPath } from "../i18n-config"
-
+import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
 import { I18nProvider, withI18n, Trans } from "@lingui/react"
 import { navigateTo } from "gatsby-link"
 
 const Layout = ({ children, lang, onLangChange }) => {
+  console.log(catalogs, prefix, deprefix, langFromPath)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,19 +29,27 @@ const Layout = ({ children, lang, onLangChange }) => {
     }
   `)
 
+  onLangChange = lang => {
+    console.log(
+      "lang:" + lang + "prefix(lang)" + prefix(lang)
+      // "deprefix(props.location.pathname" +
+      // deprefix(props.location.pathname)
+    )
+    navigateTo(prefix(lang))
+  }
+
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div>
-        <Menu />
-        <Welcome></Welcome>
-      </div>
+      <I18nProvider language={lang} catalogs={catalogs}>
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <div>
+          <Menu />
+          <LanguageSwitch lang={lang} onLangClick={onLangChange} />
+          <Welcome></Welcome>
+        </div>
+      </I18nProvider>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
