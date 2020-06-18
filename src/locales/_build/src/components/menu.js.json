@@ -1,0 +1,34 @@
+{
+  "About me": {
+    "origin": [
+      [
+        "src/components/menu.js",
+        75
+      ]
+    ]
+  },
+  "Skills": {
+    "origin": [
+      [
+        "src/components/menu.js",
+        78
+      ]
+    ]
+  },
+  "Opinions": {
+    "origin": [
+      [
+        "src/components/menu.js",
+        81
+      ]
+    ]
+  },
+  "Contact": {
+    "origin": [
+      [
+        "src/components/menu.js",
+        84
+      ]
+    ]
+  }
+}

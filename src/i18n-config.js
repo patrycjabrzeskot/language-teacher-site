@@ -1,0 +1,29 @@
+// const require = createRequire(import.meta.url)
+// const yourData = require()
+
+const languages = ["en", "pl", "sw", "no"]
+
+async function loadMessages() {
+  return await import(`@lingui/loader!./locales/en/messages.po`)
+}
+
+const catalogs = {
+  en: { messages: loadMessages },
+  //   pl: { messages: require("./locales/pl/messages.po") },
+  //   sw: { messages: require("./locales/sw/messages.po") },
+  //   no: { messages: require("./locales/no/messages.po") },
+}
+
+const defaultLanguage = "pl"
+
+const prefix = lang => (lang == defaultLanguage ? "/" : "/" + lang)
+const deprefix = pathname =>
+  pathname.startsWith("/pl/") ? pathname.substr(4) : pathname
+const langFromPath = pathname => (pathname.startsWith("/pl/") ? "pl" : "en")
+
+exports.defaultLanguage = defaultLanguage
+exports.languages = languages
+exports.catalogs = catalogs
+exports.prefix = prefix
+exports.deprefix = deprefix
+exports.langFromPath = langFromPath

@@ -8,11 +8,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import Menu from "./menu"
 import "./layout.css"
+import Welcome from "./sections/welcome"
+import LanguageSwitch from "./LanguageSwitch"
+// import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
+import { languages, prefix, deprefix, langFromPath } from "../i18n-config"
 
-const Layout = ({ children }) => {
+import { I18nProvider, withI18n, Trans } from "@lingui/react"
+import { navigateTo } from "gatsby-link"
+
+const Layout = ({ children, lang, onLangChange }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,20 +31,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <div>
+        <Menu />
+        <Welcome></Welcome>
       </div>
     </>
   )
