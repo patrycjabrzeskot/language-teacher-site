@@ -10,10 +10,10 @@ import { useState } from "react"
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Menu from "./menu"
+import Menu from "../components/menu"
 import "./layout.css"
-import Welcome from "./sections/welcome"
-import LanguageSwitch from "./LanguageSwitch"
+import Welcome from "../components/sections/welcome"
+import LanguageSwitch from "../components/LanguageSwitch"
 import {
   defaultLanguage,
   catalogs,
@@ -41,13 +41,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <I18nProvider language={language} catalogs={catalogs}>
-        <div>
-          <Menu language={language} />
-          <Welcome></Welcome>
-        </div>
-        {/* <footer>2020 Made by Patrycja Brzeskot</footer> */}
-      </I18nProvider>
+      {/* <I18nProvider language={language} catalogs={catalogs}> */}
+      <div>
+        <Menu language={language} />
+        {/* <Welcome></Welcome> */}
+      </div>
+      {/* </I18nProvider> */}
     </>
   )
 }

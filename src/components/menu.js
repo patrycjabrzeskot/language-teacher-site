@@ -17,6 +17,7 @@ const Container = styled.div`
   position: fixed !important;
   overflow: "hidden";
   z-index: 99;
+  height: 50px;
 `
 
 const MenuItem = styled.li`
@@ -34,6 +35,7 @@ const ItemsWrapper = styled.ul`
   float: right;
   list-style-type: none;
   justifycontent: "space-evenly";
+  margin-top: 10px;
 `
 
 const Logo = styled.p`
@@ -42,6 +44,7 @@ const Logo = styled.p`
   float: left;
   margin-left: 30px;
   font-weight: bold;
+  margin-top: 10px;
 `
 
 // const Slider = styled.hr`

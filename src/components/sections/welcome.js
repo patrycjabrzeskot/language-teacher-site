@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "../image"
+import Image from "../images/image"
 import styled from "styled-components"
 
 const LayeredBox = styled.div`
