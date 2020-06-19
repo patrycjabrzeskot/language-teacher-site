@@ -6,47 +6,47 @@
  */
 
 import React from "react"
+import { useState } from "react"
+
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Menu from "./menu"
 import "./layout.css"
 import Welcome from "./sections/welcome"
 import LanguageSwitch from "./LanguageSwitch"
-import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
+import {
+  defaultLanguage,
+  catalogs,
+  prefix,
+  deprefix,
+  langFromPath,
+} from "../i18n-config"
 import { I18nProvider, withI18n, Trans } from "@lingui/react"
 import { navigateTo } from "gatsby-link"
+import { useLocation, useContext } from "react-router"
 
-const Layout = ({ children, lang, onLangChange }) => {
-  console.log(catalogs, prefix, deprefix, langFromPath)
+const Layout = ({ children }) => {
+  console.log(catalogs)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  onLangChange = lang => {
-    console.log(
-      "lang:" + lang + "prefix(lang)" + prefix(lang)
-      // "deprefix(props.location.pathname" +
-      // deprefix(props.location.pathname)
-    )
-    navigateTo(prefix(lang))
-  }
+  const [language, setLanguage] = useState(defaultLanguage)
 
   return (
     <>
-      <I18nProvider language={lang} catalogs={catalogs}>
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <I18nProvider language={language} catalogs={catalogs}>
         <div>
-          <Menu />
-          <LanguageSwitch lang={lang} onLangClick={onLangChange} />
+          <Menu language={language} />
           <Welcome></Welcome>
         </div>
+        {/* <footer>2020 Made by Patrycja Brzeskot</footer> */}
       </I18nProvider>
     </>
   )

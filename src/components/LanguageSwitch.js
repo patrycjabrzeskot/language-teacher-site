@@ -4,10 +4,11 @@ import Link from "gatsby-link"
 const Lang = ({ lang, onClick, selected }) => (
   <a
     style={{
-      color: "yellow",
+      color: "black",
       marginRight: "10px",
       textDecoration: selected ? "underline" : "none",
       cursor: "pointer",
+      fontSize: "15px",
     }}
     onClick={onClick}
   >
@@ -18,8 +19,7 @@ const Lang = ({ lang, onClick, selected }) => (
 const LanguageSwitch = props => (
   <div
     style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem",
+      background: "white",
     }}
   >
     {console.log(props)}
@@ -27,7 +27,6 @@ const LanguageSwitch = props => (
       style={{
         margin: "0 auto",
         maxWidth: 960,
-        padding: "1.45rem 1.0875rem",
       }}
     >
       <h1 style={{ margin: 0 }}>

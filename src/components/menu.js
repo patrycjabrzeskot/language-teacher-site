@@ -2,15 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { Trans, withI18n } from "@lingui/react"
+import LanguageSwitch from "./LanguageSwitch"
+import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
+import { I18nProvider, withI18n, Trans } from "@lingui/react"
+import { navigateTo } from "gatsby-link"
+import { useLocation, useContext } from "react-router"
 
 const Container = styled.div`
-  ${"" /* padding-top: 15px; */}
   box-shadow: 0px 0px 5px #c9c3c3;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.5);
-  ${"" /* (225, 255, 255, 1); */}
-  ${"" /* color: (0, 255, 255, 0.5); */}
   top: 0;
   width: 100%;
   position: fixed !important;
@@ -63,11 +64,25 @@ const Logo = styled.p`
 //   }};
 // `
 
-const Menu = ({ refs }) => {
+const Menu = props => {
+  // let location = useLocation()
+  // console.log(location)
+  console.log("props: ")
+  console.log(props)
   //const scrollPosition = useScrollPosition()
-
+  // const lang = langFromPath(props.location.pathname)
+  const onLangChange = lang => {
+    console.log(
+      "lang:" + lang + "prefix(lang)" + prefix(lang)
+      // "deprefix(props.location.pathname" +
+      // deprefix(props.location.pathname)
+    )
+    navigateTo(prefix(lang))
+  }
   return (
     <Container>
+      {/* <LanguageSwitch lang={props.language} onLangClick={onLangChange} /> */}
+
       <Logo> KINGA BRZESKOT</Logo>
       <ItemsWrapper>
         {/* ref={refs.menu} */}
@@ -89,5 +104,5 @@ const Menu = ({ refs }) => {
   )
 }
 
-//export default withI18n(Menu)
-export default withI18n()(Menu)
+// export default withI18n()(Menu)
+export default Menu
