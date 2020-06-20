@@ -26,4 +26,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default withI18n()(IndexPage)
+export default IndexPage
