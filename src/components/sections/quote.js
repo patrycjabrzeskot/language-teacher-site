@@ -4,10 +4,9 @@ import styled from "styled-components"
 import "./quote.css"
 
 const Container = styled.div`
-  height: 350px;
-  line-height: 350px;
+  ${"" /* min-height: 400px; */}
+  line-height: 100px;
   text-align: center;
-  background-color: #e3d4da;
 `
 
 const Text = styled.span`
@@ -15,15 +14,37 @@ const Text = styled.span`
   vertical-align: middle;
   line-height: normal;
   font-weight: 300;
+  font-size: 55px;
+  font-family: LovedbytheKing-Regular;
+  color: white;
+  max-width: 55%;
+`
+const Author = styled.span`
+  display: inline-block;
+  vertical-align: right;
+  line-height: normal;
+  font-weight: 300;
   font-size: 45px;
   font-family: LovedbytheKing-Regular;
   color: white;
+  margin-left: 350px;
 `
 
-const Quote = () => {
+const Quote = props => {
+  console.log(props)
   return (
-    <Container>
-      <Text>„Inny język jest inną wizją życia.”</Text>
+    <Container style={props.style}>
+      <Text>
+        <br />
+        {props.text}
+      </Text>
+      <br />
+      <Author>- {props.author}</Author>
+      <Text>
+        <br />
+        <p style={{ visibility: "hidden" }}>footer</p>
+      </Text>{" "}
+      <Text></Text>{" "}
     </Container>
   )
 }
