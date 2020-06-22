@@ -7,8 +7,6 @@
 
 import React from "react"
 import { useState } from "react"
-
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Menu from "../components/menu"
 import "./layout.css"
