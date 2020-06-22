@@ -47,7 +47,6 @@ const About = () => {
             </Col>
             <Col style={{ paddingLeft: 50 }}>
               <AboutImage />
-              {/* <img src="../../images/about.jpg" style={{ maxHeight: 550 }} /> */}
             </Col>
           </Row>
         </Container>
