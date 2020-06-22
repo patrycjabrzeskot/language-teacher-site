@@ -10,7 +10,7 @@ import Quote from "../components/sections/quote"
 
 var bgColors = {
   Peach: "#e3d4da",
-  Blue: "#90a7c4",
+  Blue: "#b0d7de",
   Fire: "#496595",
 }
 
@@ -34,6 +34,8 @@ const IndexPage = () => (
       text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
       author="Czeskie przysłowie"
     />
+    <About />
+
     <GlobalStyle />
   </Layout>
 )
