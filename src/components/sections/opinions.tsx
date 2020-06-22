@@ -1,5 +1,5 @@
 import React from "react"
-import about from "../../images/about.jpg"
+// import about from "../../images/about.jpg"
 
 import Carousel from "react-bootstrap/Carousel"
 const Opinions = () => {
@@ -9,7 +9,7 @@ const Opinions = () => {
         <img
           className="d-block w-100"
           style={{ maxHeight: 550 }}
-          src={about}
+          src="../../images/about.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -21,7 +21,7 @@ const Opinions = () => {
         <img
           className="d-block w-100"
           style={{ maxHeight: 550 }}
-          src={about}
+          src="../../images/about.jpg"
           alt="Third slide"
         />
 
@@ -33,7 +33,7 @@ const Opinions = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={about}
+          src="../../images/about.jpg"
           style={{ maxHeight: 550 }}
           alt="Third slide"
         />

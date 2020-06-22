@@ -19,8 +19,6 @@ var bgColors = {
 }
 
 const IndexPage = () => (
-  // <Layout>
-
   <Layout>
     <Welcome />
     <About />
