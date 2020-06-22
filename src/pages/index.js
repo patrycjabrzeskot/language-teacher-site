@@ -8,6 +8,8 @@ import Welcome from "../components/sections/welcome"
 import About from "../components/sections/about"
 import Quote from "../components/sections/quote"
 import Skills from "../components/sections/skills"
+import Opinions from "../components/sections/opinions"
+
 import Contact from "../components/sections/contact"
 
 var bgColors = {
@@ -33,8 +35,7 @@ const IndexPage = () => (
       text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
       author="Czeskie przysłowie"
     />
-    {/* <About /> */}
-    <Contact />
+    <Opinions /> <Contact />
     <GlobalStyle />
   </Layout>
 )
