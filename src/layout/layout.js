@@ -12,6 +12,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Menu from "../components/menu"
 import "./layout.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import Welcome from "../components/sections/welcome"
 import LanguageSwitch from "../components/LanguageSwitch"
 import {

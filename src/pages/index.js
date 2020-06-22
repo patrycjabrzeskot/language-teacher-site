@@ -7,6 +7,7 @@ import GlobalStyle from "../styles/globalStyles"
 import Welcome from "../components/sections/welcome"
 import About from "../components/sections/about"
 import Quote from "../components/sections/quote"
+import Skills from "../components/sections/skills"
 import Contact from "../components/sections/contact"
 
 var bgColors = {
@@ -20,22 +21,19 @@ const IndexPage = () => (
 
   <Layout>
     <Welcome />
-    <About
-      title="O mnie"
-      description="Siemaneczko. Jestem nauczycielką języków. Jestem super i wgl"
-    />
+    <About />
     <Quote
       style={{ backgroundColor: bgColors.Blue }}
       text="„Inny język jest inną wizją życia.”"
       author="Federico Fellini"
     />
-    <About />
+    <Skills />
     <Quote
       style={{ backgroundColor: bgColors.Blue }}
       text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
       author="Czeskie przysłowie"
     />
-    <About />
+    {/* <About /> */}
     <Contact />
     <GlobalStyle />
   </Layout>

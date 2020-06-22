@@ -4,7 +4,6 @@ import styled from "styled-components"
 import "./quote.css"
 
 const Container = styled.div`
-  ${"" /* min-height: 400px; */}
   line-height: 80px;
   text-align: center;
   margin-left: 200px;
