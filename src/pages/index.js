@@ -7,6 +7,7 @@ import GlobalStyle from "../styles/globalStyles"
 import Welcome from "../components/sections/welcome"
 import About from "../components/sections/about"
 import Quote from "../components/sections/quote"
+import Contact from "../components/sections/contact"
 
 var bgColors = {
   Peach: "#e3d4da",
@@ -35,7 +36,7 @@ const IndexPage = () => (
       author="Czeskie przysłowie"
     />
     <About />
-
+    <Contact />
     <GlobalStyle />
   </Layout>
 )
