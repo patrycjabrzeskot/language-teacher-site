@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../layout/layout"
 import SEO from "../components/seo"
+import { Trans, I18nProvider, withI18n } from "@lingui/react"
 
 const SecondPage = () => (
   <Layout>
@@ -13,4 +14,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default withI18n()(SecondPage)
