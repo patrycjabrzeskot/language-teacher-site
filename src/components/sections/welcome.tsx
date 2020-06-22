@@ -18,9 +18,7 @@ const Text = styled.p``
 const Welcome = () => {
   return (
     <div>
-      <Image
-        style={{ width: "100%", position: "relative", top: 1, maxHeight: 750 }}
-      ></Image>
+      <Image></Image>
 
       {/* <LayeredBox>
         <Text>Some text</Text>

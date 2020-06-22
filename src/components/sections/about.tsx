@@ -1,7 +1,7 @@
 import React from "react"
 import AboutImage from "../images/about-image"
 import styled from "styled-components"
-import about from "../../images/about.jpg"
+//  import about from "../../images/about.jpg"
 import { Container, Row, Col } from "react-bootstrap"
 
 const Section = styled.div`
@@ -46,7 +46,7 @@ const About = () => {
               </DescriptionContent>
             </Col>
             <Col style={{ paddingLeft: 50 }}>
-              <img src={about} style={{ maxHeight: 550 }} />
+              <AboutImage />
             </Col>
           </Row>
         </Container>
