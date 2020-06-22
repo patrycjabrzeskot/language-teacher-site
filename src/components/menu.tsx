@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import LanguageSwitch from "./LanguageSwitch"
-import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
+// import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
 import { I18nProvider, withI18n, Trans } from "@lingui/react"
 import { navigateTo } from "gatsby-link"
 import { useLocation, useContext } from "react-router"
@@ -74,14 +74,14 @@ const Menu = props => {
   console.log(props)
   //const scrollPosition = useScrollPosition()
   // const lang = langFromPath(props.location.pathname)
-  const onLangChange = lang => {
-    console.log(
-      "lang:" + lang + "prefix(lang)" + prefix(lang)
-      // "deprefix(props.location.pathname" +
-      // deprefix(props.location.pathname)
-    )
-    navigateTo(prefix(lang))
-  }
+  // const onLangChange = lang => {
+  //   console.log(
+  //     "lang:" + lang + "prefix(lang)" + prefix(lang)
+  //     // "deprefix(props.location.pathname" +
+  //     // deprefix(props.location.pathname)
+  //   )
+  //   navigateTo(prefix(lang))
+  // }
   return (
     <Container>
       {/* <LanguageSwitch lang={props.language} onLangClick={onLangChange} /> */}

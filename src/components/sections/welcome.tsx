@@ -19,7 +19,7 @@ const Welcome = () => {
   return (
     <div>
       <Image
-        style={{ width: "100%", position: "relative", top: 1, maxHeight: 750 }}
+      // style={{ width: "100%", position: "relative", top: 1, maxHeight: 750 }}
       ></Image>
 
       {/* <LayeredBox>

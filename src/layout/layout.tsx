@@ -15,19 +15,18 @@ import "./layout.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Welcome from "../components/sections/welcome"
 import LanguageSwitch from "../components/LanguageSwitch"
-import {
-  defaultLanguage,
-  catalogs,
-  prefix,
-  deprefix,
-  langFromPath,
-} from "../i18n-config"
+// import {
+//   defaultLanguage,
+//   catalogs,
+//   prefix,
+//   deprefix,
+//   langFromPath,
+// } from "../i18n-config"
 import { I18nProvider, withI18n, Trans } from "@lingui/react"
 import { navigateTo } from "gatsby-link"
 import { useLocation, useContext } from "react-router"
 
 const Layout = ({ children }) => {
-  console.log(catalogs)
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -38,13 +37,13 @@ const Layout = ({ children }) => {
   //   }
   // `)
 
-  const [language, setLanguage] = useState(defaultLanguage)
+  // const [language, setLanguage] = useState(defaultLanguage)
 
   return (
     <>
       {/* <I18nProvider language={language} catalogs={catalogs}> */}
       <div>
-        <Menu language={language} />
+        <Menu />
         {/* <Welcome></Welcome> */}
         {children}
       </div>
