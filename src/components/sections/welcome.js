@@ -22,9 +22,9 @@ const Welcome = () => {
         style={{ width: "100%", position: "relative", top: 1, maxHeight: 750 }}
       ></Image>
 
-      <LayeredBox>
+      {/* <LayeredBox>
         <Text>Some text</Text>
-      </LayeredBox>
+      </LayeredBox> */}
     </div>
   )
 }

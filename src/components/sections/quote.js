@@ -5,46 +5,46 @@ import "./quote.css"
 
 const Container = styled.div`
   ${"" /* min-height: 400px; */}
-  line-height: 100px;
+  line-height: 80px;
   text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
 `
 
 const Text = styled.span`
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  font-weight: 300;
-  font-size: 55px;
+  font-size: 40px;
   font-family: LovedbytheKing-Regular;
-  color: white;
   max-width: 55%;
+`
+
+const Inner = styled.div`
+  border: 1px solid #000;
+  padding-top: 20px;
 `
 const Author = styled.span`
   display: inline-block;
   vertical-align: right;
   line-height: normal;
   font-weight: 300;
-  font-size: 45px;
+  font-size: 30px;
   font-family: LovedbytheKing-Regular;
-  color: white;
-  margin-left: 350px;
+  margin-left: 300px;
 `
 
 const Quote = props => {
   console.log(props)
   return (
-    <Container style={props.style}>
-      <Text>
+    // <Container style={props.style}>
+
+    <Container>
+      <Inner>
+        <Text>{props.text}</Text>
         <br />
-        {props.text}
-      </Text>
-      <br />
-      <Author>- {props.author}</Author>
-      <Text>
-        <br />
-        <p style={{ visibility: "hidden" }}>footer</p>
-      </Text>{" "}
-      <Text></Text>{" "}
+        <Author>- {props.author}</Author>
+      </Inner>{" "}
     </Container>
   )
 }
