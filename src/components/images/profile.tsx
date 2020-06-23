@@ -44,20 +44,7 @@ const ImageProfile = props => {
     }
   `)
 
-  switch (props.picture) {
-    case "profile1":
-      return <Img fixed={data.profile1.childImageSharp.fixed} />
-    case "profile2":
-      return <Img fixed={data.profile2.childImageSharp.fixed} />
-    case "profile3":
-      return <Img fixed={data.profile3.childImageSharp.fixed} />
-    case "profile4":
-      return <Img fixed={data.profile4.childImageSharp.fixed} />
-    case "profile5":
-      return <Img fixed={data.profile5.childImageSharp.fixed} />
-    default:
-      return <Img fixed={data.profile1.childImageSharp.fixed} />
-  }
+  return <Img fixed={data[props.picture].childImageSharp.fixed} />
 }
 
 export default ImageProfile

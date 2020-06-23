@@ -34,16 +34,13 @@ const Author = styled.span`
 `
 
 const Quote = props => {
-  console.log(props)
   return (
-    // <Container style={props.style}>
-
     <Container>
       <Inner>
         <Text>{props.text}</Text>
         <br />
         <Author>- {props.author}</Author>
-      </Inner>{" "}
+      </Inner>
     </Container>
   )
 }
