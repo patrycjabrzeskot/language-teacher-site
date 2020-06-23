@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
         <Menu />
         {children}
       </div>
-      <Footer>© 2020 Patrycja Brzeskot</Footer>
+      <Footer>Copyright © 2020 Patrycja Brzeskot</Footer>
       {/* </I18nProvider> */}
     </>
   )
