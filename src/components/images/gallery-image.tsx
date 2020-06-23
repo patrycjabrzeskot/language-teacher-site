@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Col, Row } from "react-bootstrap"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -56,28 +57,15 @@ const ImageGallery = props => {
     }
   `)
 
-  switch (props.picture) {
-    case "gal1":
-      return <Img fluid={data.gal1.childImageSharp.fluid} />
-    case "gal2":
-      return <Img fluid={data.gal2.childImageSharp.fluid} />
-    case "gal3":
-      return <Img fluid={data.gal3.childImageSharp.fluid} />
-    case "gal4":
-      return <Img fluid={data.gal4.childImageSharp.fluid} />
-    case "gal5":
-      return <Img fluid={data.gal5.childImageSharp.fluid} />
-    case "gal6":
-      return <Img fluid={data.gal6.childImageSharp.fluid} />
-    case "gal7":
-      return <Img fluid={data.gal7.childImageSharp.fluid} />
-    case "gal8":
-      return <Img fluid={data.gal8.childImageSharp.fluid} />
-    case "gal9":
-      return <Img fluid={data.gal9.childImageSharp.fluid} />
-    default:
-      return <Img fluid={data.gal1.childImageSharp.fluid} />
-  }
+  const myitems = Object.keys(data).map(gal => (
+    <>
+      <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
+        <Img fluid={data[gal].childImageSharp.fluid} />
+      </Col>
+    </>
+  ))
+
+  return <Row>{myitems}</Row>
 }
 
 export default ImageGallery

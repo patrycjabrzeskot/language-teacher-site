@@ -10,7 +10,7 @@ import Quote from "../components/sections/quote"
 import Skills from "../components/sections/skills"
 import Opinions from "../components/sections/opinions"
 import Contact from "../components/sections/contact"
-import Gallery from "../components/sections/gallery"
+import ImageGallery from "../components/images/gallery-image"
 
 var bgColors = {
   Peach: "#e3d4da",
@@ -32,7 +32,7 @@ const IndexPage = () => (
       author="Czeskie przysłowie"
     />
     <Opinions /> <Contact />
-    <Gallery />
+    <ImageGallery />
     <GlobalStyle />
   </Layout>
 )

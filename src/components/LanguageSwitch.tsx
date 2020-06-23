@@ -22,7 +22,7 @@ const LanguageSwitch = props => (
       background: "white",
     }}
   >
-    {console.log(props)}
+    {/* {console.log(props)} */}
     <div
       style={{
         margin: "0 auto",
