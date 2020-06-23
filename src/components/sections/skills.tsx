@@ -31,7 +31,7 @@ const Title = styled.h1`
 const Skills = () => {
   return (
     <>
-      <Section>
+      <Section id="skills-section">
         <Container>
           <Row>
             <Col>

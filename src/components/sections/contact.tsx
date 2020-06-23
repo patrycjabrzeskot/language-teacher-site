@@ -22,7 +22,7 @@ const Text = styled.span`
 const Contact = () => {
   return (
     <>
-      <Container>
+      <Container id="contact-section">
         <Text>
           <Icon name="envelope" /> contact@gmail.com
         </Text>

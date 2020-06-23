@@ -47,7 +47,7 @@ const Logo = styled.p`
 `
 //const [position, setPosition] = useState["top"]
 
-const Menu = props => {
+const Menu = () => {
   // let listener
 
   // const [position, setPosition] = useState["top"]
@@ -86,11 +86,16 @@ const Menu = props => {
 
       <Logo> KINGA BRZESKOT</Logo>
       <ItemsWrapper>
-        {/* <MenuItem onClick={() => scrollTo("#about-section")}> */}
-        <MenuItem>O mnie</MenuItem>
-        <MenuItem>Umiejętności</MenuItem>
-        <MenuItem>Opinie</MenuItem>
-        <MenuItem>Kontakt</MenuItem>
+        <MenuItem onClick={() => scrollTo("#about-section")}>O mnie</MenuItem>
+        <MenuItem onClick={() => scrollTo("#skills-section")}>
+          Umiejętności
+        </MenuItem>
+        <MenuItem onClick={() => scrollTo("#opinions-section")}>
+          Opinie
+        </MenuItem>
+        <MenuItem onClick={() => scrollTo("#contact-section")}>
+          Kontakt
+        </MenuItem>
       </ItemsWrapper>
     </Container>
   )
