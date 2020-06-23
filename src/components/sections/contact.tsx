@@ -24,11 +24,11 @@ const Contact = () => {
     <>
       <Container>
         <Text>
-          <Icon name="envelope" /> kingabrzeskot@gmail.com
+          <Icon name="envelope" /> contact@gmail.com
         </Text>
         <br />
         <Text>
-          <Icon name="phone" /> 530 819 891
+          <Icon name="phone" /> 123 123 123
         </Text>
       </Container>
     </>

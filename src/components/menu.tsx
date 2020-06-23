@@ -9,9 +9,9 @@ import { navigateTo } from "gatsby-link"
 import { useLocation, useContext } from "react-router"
 
 const Container = styled.div`
-  box-shadow: 0px 0px 5px #c9c3c3;
+  // box-shadow: 0px 0px 5px #c9c3c3;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
   top: 0;
   width: 100%;
   position: fixed !important;
