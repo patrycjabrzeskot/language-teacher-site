@@ -9,8 +9,8 @@ import About from "../components/sections/about"
 import Quote from "../components/sections/quote"
 import Skills from "../components/sections/skills"
 import Opinions from "../components/sections/opinions"
-
 import Contact from "../components/sections/contact"
+import Gallery from "../components/sections/gallery"
 
 var bgColors = {
   Peach: "#e3d4da",
@@ -23,17 +23,16 @@ const IndexPage = () => (
     <Welcome />
     <About />
     <Quote
-      style={{ backgroundColor: bgColors.Blue }}
       text="„Inny język jest inną wizją życia.”"
       author="Federico Fellini"
     />
     <Skills />
     <Quote
-      style={{ backgroundColor: bgColors.Blue }}
       text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
       author="Czeskie przysłowie"
     />
     <Opinions /> <Contact />
+    <Gallery />
     <GlobalStyle />
   </Layout>
 )
