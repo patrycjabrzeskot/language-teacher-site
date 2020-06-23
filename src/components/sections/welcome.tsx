@@ -13,30 +13,22 @@ const Inner = styled.div`
   position: absolute;
   border: 1px solid white;
   margin-top: 50px;
-  // min-height: 400px;
-  // min-width: 600px;
   text-align: center;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 100px;
   width: 60%;
   height: 50%;
   left: 20%;
   top: 15%;
 `
 const Name = styled.span`
-  color: white;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 100px;
-  font-size: 80px;
-  font-weight: 200;
+  font-size: 90px;
   font-family: LovedbytheKing-Regular;
 `
 const Text = styled.span`
-  color: white;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 100px;
   font-size: 30px;
-  font-weight: 200;
   font-family: Lato;
 `
 
