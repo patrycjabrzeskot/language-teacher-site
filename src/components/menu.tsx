@@ -70,8 +70,7 @@ const Logo = styled.p`
 const Menu = props => {
   // let location = useLocation()
   // console.log(location)
-  console.log("props: ")
-  console.log(props)
+
   //const scrollPosition = useScrollPosition()
   // const lang = langFromPath(props.location.pathname)
   // const onLangChange = lang => {
