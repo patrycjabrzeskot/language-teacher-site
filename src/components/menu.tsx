@@ -55,14 +55,19 @@ const Menu = () => {
   console.log(document.body.scrollTop)
 
   useEffect(() => {
-    console.log("raz")
+    const section: HTMLElement | null = document.getElementById(
+      "welcome-section"
+    )
     const handleScroll = () => {
-      console.log("useeffect")
-      let show = document.body.scrollTop > 600
-      if (navRef.current !== show) {
-        console.log("tutaj")
-        console.log(show)
-        setNavBackground(show)
+      console.log("section: " + section)
+      if (section) {
+        console.log(section.offsetHeight)
+        const sectionSize = section.offsetHeight
+
+        let show = document.body.scrollTop > sectionSize - 50
+        if (navRef.current !== show) {
+          setNavBackground(show)
+        }
       }
     }
 
