@@ -24,7 +24,6 @@ const Title = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
 `
 const About = () => {
   return (
@@ -33,7 +32,7 @@ const About = () => {
         <Container>
           <Row>
             <Col>
-              <Title>O mnie</Title>
+              <Title>O MNIE</Title>
               <DescriptionContent>
                 <br />
                 Mam na imię Kinga. Moją pasją są języki. Lubię się nią dzielić

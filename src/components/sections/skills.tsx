@@ -26,7 +26,6 @@ const Title = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
 `
 const Skills = () => {
   return (
@@ -38,7 +37,7 @@ const Skills = () => {
               <SectionImage picture="skills" />
             </Col>
             <Col style={{ paddingLeft: 50 }}>
-              <Title>Umiejętności</Title>
+              <Title>UMIEJĘTNOŚCI</Title>
               <DescriptionContent>
                 <br />
                 Uczę szwedzkiego i norweskiego. <br />W 2019 roku ukończyłam
