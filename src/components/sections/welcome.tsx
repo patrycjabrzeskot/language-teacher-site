@@ -34,7 +34,7 @@ const Text = styled.span`
 
 const Welcome = () => {
   return (
-    <div>
+    <div id="welcome-section">
       <Container>
         <Image />
         <Inner>

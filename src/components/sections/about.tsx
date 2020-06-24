@@ -29,7 +29,7 @@ const Title = styled.h1`
 const About = () => {
   return (
     <>
-      <Section>
+      <Section id="about-section">
         <Container>
           <Row>
             <Col>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import scrollTo from "gatsby-plugin-smoothscroll"
@@ -7,26 +7,28 @@ import LanguageSwitch from "./LanguageSwitch"
 import { I18nProvider, withI18n, Trans } from "@lingui/react"
 import { navigateTo } from "gatsby-link"
 import { useLocation, useContext } from "react-router"
+import "./sections/quote.css"
+import useWindowScrollPosition from "@rehooks/window-scroll-position"
 
 const Container = styled.div`
-  // box-shadow: 0px 0px 5px #c9c3c3;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0);
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  margin-right: 10px;
   position: fixed !important;
   overflow: "hidden";
   z-index: 99;
   height: 50px;
+  color: white;
 `
 
 const MenuItem = styled.li`
   width: 25%;
   cursor: pointer;
-  text-shadow: 1px 1px 8px #fff;
   transition: letter-spacing 0.4s;
   &:hover {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 `
 const ItemsWrapper = styled.ul`
@@ -39,37 +41,39 @@ const ItemsWrapper = styled.ul`
 `
 
 const Logo = styled.p`
-  width: 500px;
   display: flex;
   float: left;
   margin-left: 30px;
-  font-weight: bold;
-  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 25px;
+  font-family: LovedbytheKing-Regular;
 `
 
-// const Slider = styled.hr`
-//   color: ${({ theme }) => theme.colors.heading};
-//   width: 15%;
-//   height: 2px;
-//   margin: 5px 0 0 0;
-//   transition: margin 0.5s;
-//   margin-left: ${({ position }) => {
-//     switch (position) {
-//       case "home":
-//         return "0"
-//       case "about":
-//         return "25%"
-//       case "projects":
-//         return "50%"
-//       case "contact":
-//         return "75%"
-//     }
-//   }};
-// `
+const Menu = () => {
+  const [navBackground, setNavBackground] = useState(false)
+  let navRef = useRef<boolean>()
+  navRef.current = navBackground
 
-const Menu = props => {
-  // let location = useLocation()
-  // console.log(location)
+  useEffect(() => {
+    const section: HTMLElement | null = document.getElementById(
+      "welcome-section"
+    )
+    const handleScroll = () => {
+      if (section) {
+        const sectionSize = section.offsetHeight
+
+        let show = document.body.scrollTop > sectionSize - 50
+        if (navRef.current !== show) {
+          setNavBackground(show)
+        }
+      }
+    }
+
+    document.body.addEventListener("scroll", handleScroll)
+    return () => {
+      document.body.removeEventListener("scroll", handleScroll)
+    }
+  }, [setNavBackground, document.body.scrollTop])
 
   //const scrollPosition = useScrollPosition()
   // const lang = langFromPath(props.location.pathname)
@@ -81,30 +85,35 @@ const Menu = props => {
   //   )
   //   navigateTo(prefix(lang))
   // }
+
   return (
-    <Container>
+    <Container
+      style={{
+        transition: "500ms ease",
+        backgroundColor: navBackground ? "black" : "transparent",
+      }}
+    >
       {/* <LanguageSwitch lang={props.language} onLangClick={onLangChange} /> */}
 
       <Logo> KINGA BRZESKOT</Logo>
       <ItemsWrapper>
-        {/* ref={refs.menu} */}
-        <MenuItem onClick={() => scrollTo("#about-section")}>
-          <Trans>About me</Trans>
+        <MenuItem onClick={() => scrollTo("#about-section")}>O mnie</MenuItem>
+        <MenuItem
+          onClick={() => {
+            scrollTo("#skills-section")
+          }}
+        >
+          Umiejętności
         </MenuItem>
-        <MenuItem onClick={() => scrollTo("#skills-section")}>
-          <Trans>Skills</Trans>
-        </MenuItem>
-        <MenuItem onClick={() => scrollTo("#opimions-section")}>
-          <Trans>Opinions</Trans>
+        <MenuItem onClick={() => scrollTo("#opinions-section")}>
+          Opinie
         </MenuItem>
         <MenuItem onClick={() => scrollTo("#contact-section")}>
-          <Trans>Contact</Trans>
+          Kontakt
         </MenuItem>
       </ItemsWrapper>
-      {/* <Slider position={scrollPosition} ref={refs.slider} /> */}
     </Container>
   )
 }
 
-// export default withI18n()(Menu)
 export default Menu
