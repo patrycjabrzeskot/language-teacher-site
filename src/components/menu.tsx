@@ -13,7 +13,9 @@ import useWindowScrollPosition from "@rehooks/window-scroll-position"
 const Container = styled.div`
   overflow: hidden;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  margin-right: 10px;
   position: fixed !important;
   overflow: "hidden";
   z-index: 99;
@@ -50,18 +52,14 @@ const Logo = styled.p`
 const Menu = () => {
   const [navBackground, setNavBackground] = useState(false)
   let navRef = useRef<boolean>()
-  console.log(navRef)
   navRef.current = navBackground
-  console.log(document.body.scrollTop)
 
   useEffect(() => {
     const section: HTMLElement | null = document.getElementById(
       "welcome-section"
     )
     const handleScroll = () => {
-      console.log("section: " + section)
       if (section) {
-        console.log(section.offsetHeight)
         const sectionSize = section.offsetHeight
 
         let show = document.body.scrollTop > sectionSize - 50
@@ -102,7 +100,6 @@ const Menu = () => {
         <MenuItem onClick={() => scrollTo("#about-section")}>O mnie</MenuItem>
         <MenuItem
           onClick={() => {
-            console.log(document.body.scrollTop)
             scrollTo("#skills-section")
           }}
         >
