@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react"
 import styled from "styled-components"
 import { useScrollPosition } from "../hooks/useScrollPosition"
 import scrollTo from "gatsby-plugin-smoothscroll"
@@ -8,6 +8,7 @@ import { I18nProvider, withI18n, Trans } from "@lingui/react"
 import { navigateTo } from "gatsby-link"
 import { useLocation, useContext } from "react-router"
 import "./sections/quote.css"
+import useWindowScrollPosition from "@rehooks/window-scroll-position"
 
 const Container = styled.div`
   overflow: hidden;
@@ -45,30 +46,31 @@ const Logo = styled.p`
   font-size: 25px;
   font-family: LovedbytheKing-Regular;
 `
-//const [position, setPosition] = useState["top"]
 
 const Menu = () => {
-  // let listener
+  const [navBackground, setNavBackground] = useState(false)
+  let navRef = useRef<boolean>()
+  console.log(navRef)
+  navRef.current = navBackground
+  console.log(document.body.scrollTop)
 
-  // const [position, setPosition] = useState["top"]
+  useEffect(() => {
+    console.log("raz")
+    const handleScroll = () => {
+      console.log("useeffect")
+      let show = document.body.scrollTop > 600
+      if (navRef.current !== show) {
+        console.log("tutaj")
+        console.log(show)
+        setNavBackground(show)
+      }
+    }
 
-  // const componentDidMount = () => {
-  //   listener = document.addEventListener("scroll", e => {
-  //     let scrolled = document.scrollingElement.scrollTop
-  //     if (scrolled >= 120) {
-  //       if (position !== "amir") {
-  //         setPosition("amir")
-  //       }
-  //     } else {
-  //       if (position !== "top") {
-  //         setPosition("top")
-  //       }
-  //     }
-  //   })
-  // }
-
-  // let location = useLocation()
-  // console.log(location)
+    document.body.addEventListener("scroll", handleScroll)
+    return () => {
+      document.body.removeEventListener("scroll", handleScroll)
+    }
+  }, [setNavBackground, document.body.scrollTop])
 
   //const scrollPosition = useScrollPosition()
   // const lang = langFromPath(props.location.pathname)
@@ -80,14 +82,25 @@ const Menu = () => {
   //   )
   //   navigateTo(prefix(lang))
   // }
+
   return (
-    <Container style={{ backgroundColor: "black" }}>
+    <Container
+      style={{
+        transition: "500ms ease",
+        backgroundColor: navBackground ? "black" : "transparent",
+      }}
+    >
       {/* <LanguageSwitch lang={props.language} onLangClick={onLangChange} /> */}
 
       <Logo> KINGA BRZESKOT</Logo>
       <ItemsWrapper>
         <MenuItem onClick={() => scrollTo("#about-section")}>O mnie</MenuItem>
-        <MenuItem onClick={() => scrollTo("#skills-section")}>
+        <MenuItem
+          onClick={() => {
+            console.log(document.body.scrollTop)
+            scrollTo("#skills-section")
+          }}
+        >
           Umiejętności
         </MenuItem>
         <MenuItem onClick={() => scrollTo("#opinions-section")}>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import Layout from "../layout/layout"
 import Image from "../components/images/image"
@@ -12,29 +12,25 @@ import Opinions from "../components/sections/opinions"
 import Contact from "../components/sections/contact"
 import ImageGallery from "../components/images/gallery-image"
 
-var bgColors = {
-  Peach: "#e3d4da",
-  Blue: "#b0d7de",
-  Fire: "#496595",
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Welcome />
+      <About />
+      <Quote
+        text="„Inny język jest inną wizją życia.”"
+        author="Federico Fellini"
+      />
+      <Skills />
+      <Quote
+        text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
+        author="Czeskie przysłowie"
+      />
+      <Opinions /> <Contact />
+      <ImageGallery />
+      <GlobalStyle />
+    </Layout>
+  )
 }
-
-const IndexPage = () => (
-  <Layout>
-    <Welcome />
-    <About />
-    <Quote
-      text="„Inny język jest inną wizją życia.”"
-      author="Federico Fellini"
-    />
-    <Skills />
-    <Quote
-      text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
-      author="Czeskie przysłowie"
-    />
-    <Opinions /> <Contact />
-    <ImageGallery />
-    <GlobalStyle />
-  </Layout>
-)
 
 export default IndexPage

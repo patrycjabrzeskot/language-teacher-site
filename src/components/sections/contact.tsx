@@ -4,12 +4,12 @@ import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 
 const Container = styled.div`
-  ${"" /* ${"" /* min-height: 400px; */} */}
   line-height: 50px;
   text-align: center;
   padding: 50px;
   margin-left: 100px;
   margin-right: 100px;
+  font-family: Lato;
 `
 
 const Text = styled.span`

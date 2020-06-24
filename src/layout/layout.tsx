@@ -34,6 +34,7 @@ const Footer = styled.footer`
   padding-top: 20px;
   font-size: 16px;
 `
+
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {

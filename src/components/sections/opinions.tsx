@@ -16,7 +16,7 @@ const Opinions = () => {
 
   return (
     <Container
-      style={{ paddingTop: 100, paddingBottom: 100 }}
+      style={{ paddingTop: 100, paddingBottom: 100, fontFamily: "Lato" }}
       id="opinions-section"
     >
       <Slider {...settings} style={{ paddingBottom: 25 }}>
