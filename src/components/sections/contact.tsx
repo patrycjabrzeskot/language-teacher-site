@@ -36,7 +36,7 @@ const Contact = () => {
         <hr style={{ marginBottom: 50 }} />
         <Row>
           <Col xs={6} md={6}>
-            <h2 style={{ fontSize: 40, paddingBottom: 10 }}>Masz pytania?</h2>
+            <h2 style={{ fontSize: 40, paddingBottom: 20 }}>Masz pytania?</h2>
             Napisz do mnie a postaram się jak najszybciej odpowiedzieć.
           </Col>
           <Col xs={6} md={6}>
