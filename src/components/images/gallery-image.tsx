@@ -24,7 +24,7 @@ export const galleryImg = graphql`
   }
 `
 
-const ImageGallery = props => {
+const ImageGallery = () => {
   const data = useStaticQuery(graphql`
     query {
       gal1: file(relativePath: { eq: "gallery/gal1.jpg" }) {
