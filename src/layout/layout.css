@@ -66,8 +66,8 @@ h1 {
   margin: 0.67em 0;
 }
 h1 {
-  overflow: hidden;
   text-align: center;
+  overflow: hidden;
 }
 
 h1:before,
@@ -114,9 +114,7 @@ sup {
 img {
   border-style: none;
 }
-svg:not(:root) {
-  overflow: hidden;
-}
+
 code,
 kbd,
 pre,
@@ -214,7 +212,7 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 * {
   box-sizing: inherit;

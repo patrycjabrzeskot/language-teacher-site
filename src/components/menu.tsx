@@ -11,13 +11,11 @@ import "./sections/quote.css"
 import useWindowScrollPosition from "@rehooks/window-scroll-position"
 
 const Container = styled.div`
-  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
   margin-right: 10px;
   position: fixed !important;
-  overflow: "hidden";
   z-index: 99;
   height: 50px;
   color: white;
