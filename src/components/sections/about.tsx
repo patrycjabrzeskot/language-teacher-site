@@ -32,22 +32,28 @@ const About = () => {
         <Container>
           <Row>
             <Col>
-              <Title>O MNIE</Title>
-              <DescriptionContent>
-                <br />
-                Mam na imię Kinga. Moją pasją są języki. Lubię się nią dzielić
-                przez nauczanie innych. Moje motto to "Iloma językami mówisz –
-                tyle razy żyjesz".
-                <br />
-                <br />
-                Lekcje prowadzę w sposób przyjemny i bez stresu. Zawsze
-                indywidualnie podchodzę do moich uczniów, próbuję dopasować
-                sposób przedstawiania materiału tak, aby każdy wynióśł jak
-                najwięcej z każdej lekcji. <br />
-                <br />
-                Prywatnie lubię koty, herbatę i podróże - zwłaszcza do
-                skandynawii!
-              </DescriptionContent>
+              <div
+                data-sal="slide-up"
+                data-sal-duration="2000"
+                data-sal-easing="ease"
+              >
+                <Title>O MNIE</Title>
+                <DescriptionContent>
+                  <br />
+                  Mam na imię Kinga. Moją pasją są języki. Lubię się nią dzielić
+                  przez nauczanie innych. Moje motto to "Iloma językami mówisz –
+                  tyle razy żyjesz".
+                  <br />
+                  <br />
+                  Lekcje prowadzę w sposób przyjemny i bez stresu. Zawsze
+                  indywidualnie podchodzę do moich uczniów, próbuję dopasować
+                  sposób przedstawiania materiału tak, aby każdy wynióśł jak
+                  najwięcej z każdej lekcji. <br />
+                  <br />
+                  Prywatnie lubię koty, herbatę i podróże - zwłaszcza do
+                  skandynawii!
+                </DescriptionContent>
+              </div>
             </Col>
             <Col style={{ paddingLeft: 50 }}>
               <SectionImage picture="about" />

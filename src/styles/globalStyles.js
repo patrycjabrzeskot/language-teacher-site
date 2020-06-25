@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   
   body{
     font-size: 1.8rem;
-    font-family: "futura-pt", sans-serif
+    font-family: "Lato"
   }
   
   h1{

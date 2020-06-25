@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useRef } from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from "react"
 import Layout from "../layout/layout"
-import Image from "../components/images/image"
-import SEO from "../components/seo"
 import GlobalStyle from "../styles/globalStyles"
 import Welcome from "../components/sections/welcome"
 import About from "../components/sections/about"
@@ -29,7 +26,6 @@ const IndexPage = () => {
       <Opinions />
       <Contact />
       <ImageGallery />
-
       <GlobalStyle />
     </Layout>
   )

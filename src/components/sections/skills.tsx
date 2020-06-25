@@ -38,7 +38,11 @@ const Skills = () => {
             </Col>
             <Col style={{ paddingLeft: 50 }}>
               <Title>UMIEJĘTNOŚCI</Title>
-              <DescriptionContent>
+              <DescriptionContent
+                data-sal="slide-up"
+                data-sal-duration="2000"
+                data-sal-easing="ease"
+              >
                 <br />
                 Uczę szwedzkiego i norweskiego. <br />W 2019 roku ukończyłam
                 studia na Uniwersytecie Śląskim na kierunku Germanistyka,
