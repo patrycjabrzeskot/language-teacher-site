@@ -26,8 +26,10 @@ const IndexPage = () => {
         text="„Iloma językami mówisz – tyle razy żyjesz. Jeśli znasz tylko jeden, żyjesz tylko raz.”"
         author="Czeskie przysłowie"
       />
-      <Opinions /> <Contact />
+      <Opinions />
+      <Contact />
       <ImageGallery />
+
       <GlobalStyle />
     </Layout>
   )

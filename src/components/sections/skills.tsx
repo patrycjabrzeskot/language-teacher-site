@@ -1,5 +1,5 @@
 import React from "react"
-import AboutImage from "../images/about-image"
+import SectionImage from "../images/section-image"
 import styled from "styled-components"
 // import about from "../../images/about.jpg"
 import { Container, Row, Col } from "react-bootstrap"
@@ -14,7 +14,7 @@ const DescriptionContent = styled.div`
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 32px;
   margin: 15px 0;
   max-width: 500px;
@@ -26,7 +26,6 @@ const Title = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  font-size: 30px;
 `
 const Skills = () => {
   return (
@@ -35,41 +34,30 @@ const Skills = () => {
         <Container>
           <Row>
             <Col>
-              <AboutImage />
-              {/* <img src="../../images/about.jpg" style={{ maxHeight: 550 }} /> */}
+              <SectionImage picture="skills" />
             </Col>
             <Col style={{ paddingLeft: 50 }}>
-              <Title>Umiejętności</Title>
+              <Title>UMIEJĘTNOŚCI</Title>
               <DescriptionContent>
-                Umiem różne rzeczy. Języki i takie tam Umiem różne rzeczy.
-                Języki i takie tam Umiem różne rzeczy. Języki i takie tam Umiem
-                różne rzeczy. Języki i takie tam Umiem różne rzeczy. Języki i
-                takie tam Umiem różne rzeczy. Języki i takie tam Umiem różne
-                rzeczy. Języki i takie tam Umiem różne rzeczy. Języki i takie
-                tam Umiem różne rzeczy. Języki i takie tam Umiem różne rzeczy.
-                Języki i takie tam
+                <br />
+                Uczę szwedzkiego i norweskiego. <br />W 2019 roku ukończyłam
+                studia na Uniwersytecie Śląskim na kierunku Germanistyka,
+                specjalności - Język szwedzki. Obecnie dalej studiuję na
+                Uniwersytecie Poznańskim kierunek Filologia szwedzka.
+                <br /> Oprócz studiów z języka szwedzkiego, na koncie mam
+                certyfikat Bergentest, potwierdzający umiejętności języka
+                norweskiego. <br />
+                <br />
+                Uczę dzieci i dorosłych. Indywidualnie lub w grupie. Od podstaw
+                lub poziom zaawansowany. Prowadzę "rozmówki". Do wybory do
+                koloru. Jeśli masz pytania lub pomysły napisz do mnie.
+                <br /> Lekcje indywidualne nauczam osobiście lub online - w
+                zależności od odległości lub preferencji ucznia.
               </DescriptionContent>
             </Col>
           </Row>
         </Container>
       </Section>
-
-      {/* <Tontainer>
-        <DescriptionContainer>
-          <img src={about} style={{ maxHeight: 550 }} />
-        </DescriptionContainer>
-        <DescriptionContainer data-aos="fade-up">
-          <Title>Umiejętności</Title>
-          <DescriptionContent>
-            Umiem różne rzeczy. Języki i takie tam Umiem różne rzeczy. Języki i
-            takie tam Umiem różne rzeczy. Języki i takie tam Umiem różne rzeczy.
-            Języki i takie tam Umiem różne rzeczy. Języki i takie tam Umiem
-            różne rzeczy. Języki i takie tam Umiem różne rzeczy. Języki i takie
-            tam Umiem różne rzeczy. Języki i takie tam Umiem różne rzeczy.
-            Języki i takie tam Umiem różne rzeczy. Języki i takie tam
-          </DescriptionContent>
-        </DescriptionContainer>
-      </Tontainer> */}
     </>
   )
 }

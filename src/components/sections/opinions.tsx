@@ -24,32 +24,33 @@ const Opinions = () => {
           <Opinion
             name="Magda S."
             picture="profile1"
-            desc="My time spent with Anneli was both productive and enjoyable. She is a very good teacher and also a very pleasant person. 
-            Anyone wishing to learn the Swedish language will not be disappointed with her instruction."
+            desc="Mój czas spędzony z Kingą był produktywny, ale też przyjemny. 
+            Jest bardzo dobrą nauczycielką i miłą osobą. Jeśli chcesz się nauczyć języka szwedzkiego - nie zawiedziesz się."
           />
         </div>
         <div>
           <Opinion
             name="Julia P."
             picture="profile2"
-            desc="Most patient teacher ever!"
+            desc="Najbardziej cierpliwa nauczycielka na świecie!"
           ></Opinion>
         </div>
         <div>
           <Opinion
             name="Kamil G."
             picture="profile3"
-            desc="Anneli is an excellent teacher! My lessons have followed a structured and comprehensive course
-             presented in a style that is easy to follow and understand."
+            desc="Kinga jest wspaniałą nauczycielką. Moje lekcje 
+            to był ustrukturyzowany i kompleksowy kurs przedstawiony w sposób,
+             który jest łatwy to zrozumienia"
           ></Opinion>
         </div>
         <div>
           <Opinion
             name="Katarzyna B."
             picture="profile4"
-            desc="In my experience Anneli is a natural language teacher. She is friendly enough that you feel 
-your hesitations about speaking Swedish dissolve. She delivers the material in ways
- that make it very easy to assimilate."
+            desc="Kinga jest naturalnym nauczycielem języka. Jest tak przyjazna,
+             że czujesz, że twoje opory w mówieniu po szwedzku znikają. Wykłada materiał w sposób,
+              który pozwala na łatwe zrozumienie."
           ></Opinion>
         </div>
 
@@ -57,9 +58,8 @@ your hesitations about speaking Swedish dissolve. She delivers the material in w
           <Opinion
             name="Tomek B."
             picture="profile5"
-            desc="
-            Anneli is simply fantastic. She has a natural gift for teaching and can explain what appear to be the most 
-            complex things in memorable and easy to digest gems."
+            desc="Kinga jest po prostu fantastyczna. Ma naturalny talent do nauczania i potrafi 
+            wytłumaczyć nawet najbardziej skomplikowane rzeczy."
           ></Opinion>
         </div>
       </Slider>
