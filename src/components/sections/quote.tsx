@@ -33,6 +33,11 @@ const Author = styled.span`
   margin-left: 300px;
 `
 
+export interface QuoteProps {
+  text: string
+  author: string
+}
+
 const Quote = props => {
   return (
     <Container>

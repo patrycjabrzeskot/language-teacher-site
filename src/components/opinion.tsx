@@ -2,12 +2,17 @@ import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 import { ResponsiveEmbed, Image } from "react-bootstrap"
-import AboutImage from "./images/section-image"
 import ImageProfile from "./images/profile"
 import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 
-const Opinion = props => {
+export interface OpinionProps {
+  picture: string
+  name: string
+  desc: string
+}
+
+const Opinion = (props: OpinionProps) => {
   return (
     <>
       <Container style={{ paddingLeft: 50 }}>

@@ -13,6 +13,10 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+export interface ImageProps {
+  picture: string
+}
+
 export const circleImage = graphql`
   fragment circleImage on File {
     childImageSharp {
@@ -23,7 +27,7 @@ export const circleImage = graphql`
   }
 `
 
-const ImageProfile = props => {
+const ImageProfile = (props: ImageProps) => {
   const data = useStaticQuery(graphql`
     query {
       profile1: file(relativePath: { eq: "profile1.jpg" }) {

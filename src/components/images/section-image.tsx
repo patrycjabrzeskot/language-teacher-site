@@ -2,6 +2,10 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+export interface ImageProps {
+  picture: string
+}
+
 export const image = graphql`
   fragment image on File {
     childImageSharp {
@@ -12,7 +16,7 @@ export const image = graphql`
   }
 `
 
-const SectionImage = props => {
+const SectionImage = (props: ImageProps) => {
   const data = useStaticQuery(graphql`
     query {
       about: file(relativePath: { eq: "about.jpg" }) {
