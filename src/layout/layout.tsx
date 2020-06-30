@@ -1,6 +1,6 @@
 import React from "react"
-import Menu from "../components/menu"
 import "./layout.css"
+import Menu from "../components/menu"
 import "bootstrap/dist/css/bootstrap.min.css"
 import styled from "styled-components"
 
