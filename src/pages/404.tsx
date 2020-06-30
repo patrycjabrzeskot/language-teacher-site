@@ -1,14 +1,5 @@
 import Layout from "../layout/layout"
-import { Trans, I18nProvider, withI18n } from "@lingui/react"
-
-// const NotFoundPage = () => (
-//   <Layout>
-//     <Welcome />
-//     <div style={{ marginTop: 100, marginLeft: 30 }}>
-//       <h2>Sorry. This site doesn't exist</h2>
-//     </div>
-//   </Layout>
-// )
+import { Link } from "gatsby"
 
 import React from "react"
 import Image from "../components/images/image"
@@ -57,7 +48,6 @@ const Footer = styled.footer`
 
 const NotFoundPage = () => {
   return (
-    // <Layout>
     <div id="welcome-section">
       <Container>
         <Image />
@@ -66,13 +56,18 @@ const NotFoundPage = () => {
           <Name>Ups! Ta strona nie istnieje</Name>
           <br />
           <Text>
-            Click <a>here</a> to go back to the main page
+            Kliknij{" "}
+            <u>
+              <Link to="/" style={{ color: "white" }}>
+                tutaj
+              </Link>
+            </u>{" "}
+            aby przejść do głównej strony
           </Text>
         </Inner>
       </Container>
       <Footer>Copyright © 2020 Patrycja Brzeskot</Footer>
     </div>
-    // </Layout>
   )
 }
 

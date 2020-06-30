@@ -28,19 +28,6 @@ const SectionImage = (props: ImageProps) => {
     }
   `)
 
-  // const SectionImage = () => {
-  //   const data = useStaticQuery(graphql`
-  //     query {
-  //       placeholderImage: file(relativePath: { eq: "about1.jpg" }) {
-  //         childImageSharp {
-  //           fluid {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `)
-
   return <Img fluid={data[props.picture].childImageSharp.fluid} />
 }
 
