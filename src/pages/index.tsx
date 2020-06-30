@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "../layout/layout"
 import GlobalStyle from "../styles/globalStyles"
 import Welcome from "../components/sections/welcome"
@@ -9,7 +9,7 @@ import Opinions from "../components/sections/opinions"
 import Contact from "../components/sections/contact"
 import ImageGallery from "../components/images/gallery-image"
 
-const IndexPage = () => {
+const Index = () => {
   return (
     <Layout>
       <Welcome />
@@ -31,4 +31,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Index

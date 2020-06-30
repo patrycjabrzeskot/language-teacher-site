@@ -1,14 +1,7 @@
-import React, { useState, useRef, useEffect, useLayoutEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
-import { useScrollPosition } from "../hooks/useScrollPosition"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import LanguageSwitch from "./LanguageSwitch"
-// import { catalogs, prefix, deprefix, langFromPath } from "../i18n-config"
-import { I18nProvider, withI18n, Trans } from "@lingui/react"
-import { navigateTo } from "gatsby-link"
-import { useLocation, useContext } from "react-router"
 import "./sections/quote.css"
-import useWindowScrollPosition from "@rehooks/window-scroll-position"
 
 const Container = styled.div`
   top: 0;
@@ -73,17 +66,6 @@ const Menu = () => {
     }
   }, [setNavBackground, document.body.scrollTop])
 
-  //const scrollPosition = useScrollPosition()
-  // const lang = langFromPath(props.location.pathname)
-  // const onLangChange = lang => {
-  //   console.log(
-  //     "lang:" + lang + "prefix(lang)" + prefix(lang)
-  //     // "deprefix(props.location.pathname" +
-  //     // deprefix(props.location.pathname)
-  //   )
-  //   navigateTo(prefix(lang))
-  // }
-
   return (
     <Container
       style={{
@@ -91,8 +73,6 @@ const Menu = () => {
         backgroundColor: navBackground ? "black" : "transparent",
       }}
     >
-      {/* <LanguageSwitch lang={props.language} onLangClick={onLangChange} /> */}
-
       <Logo> KINGA BRZESKOT</Logo>
       <ItemsWrapper>
         <MenuItem onClick={() => scrollTo("#about-section")}>O mnie</MenuItem>
