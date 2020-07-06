@@ -1,8 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
-import { ResponsiveEmbed, Image } from "react-bootstrap"
-import ImageProfile from "./images/profile"
+import ImageProfile from "../imageComponents/ImageProfile"
 import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 
@@ -12,7 +10,7 @@ export interface OpinionProps {
   desc: string
 }
 
-const Opinion = (props: OpinionProps) => {
+const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
   return (
     <>
       <Container style={{ paddingLeft: 50 }}>

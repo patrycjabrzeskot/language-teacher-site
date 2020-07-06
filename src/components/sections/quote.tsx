@@ -1,8 +1,24 @@
 import React from "react"
-import Image from "../images/image"
+import Image from "../imageComponents/image"
 import styled from "styled-components"
-import "./quote.css"
+import "../../styles/quote.css"
 
+export interface QuoteProps {
+  text: string
+  author: string
+}
+
+const Quote: React.FC<QuoteProps> = (props: QuoteProps) => {
+  return (
+    <Container>
+      <Inner>
+        <Text>{props.text}</Text>
+        <br />
+        <Author>- {props.author}</Author>
+      </Inner>
+    </Container>
+  )
+}
 const Container = styled.div`
   line-height: 80px;
   text-align: center;
@@ -32,22 +48,5 @@ const Author = styled.span`
   font-family: LovedbytheKing-Regular;
   margin-left: 300px;
 `
-
-export interface QuoteProps {
-  text: string
-  author: string
-}
-
-const Quote = props => {
-  return (
-    <Container>
-      <Inner>
-        <Text>{props.text}</Text>
-        <br />
-        <Author>- {props.author}</Author>
-      </Inner>
-    </Container>
-  )
-}
 
 export default Quote

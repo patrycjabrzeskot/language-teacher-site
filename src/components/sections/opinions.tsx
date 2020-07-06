@@ -3,9 +3,9 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Container } from "react-bootstrap"
-import Opinion from "../opinion"
+import Opinion from "../utilities/Opinion"
 
-const Opinions = () => {
+const Opinions: React.FC = () => {
   const settings = {
     dots: true,
     infinite: true,

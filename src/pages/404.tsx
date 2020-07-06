@@ -1,9 +1,32 @@
-import Layout from "../layout/layout"
 import { Link } from "gatsby"
-
 import React from "react"
-import Image from "../components/images/image"
+import Image from "../components/imageComponents/image"
 import styled from "styled-components"
+
+const NotFoundPage: React.FC = () => {
+  return (
+    <div id="welcome-section">
+      <Container>
+        <Image />
+        <Inner>
+          <br />
+          <Name>Ups! Ta strona nie istnieje</Name>
+          <br />
+          <Text>
+            Kliknij{" "}
+            <u>
+              <Link to="/" style={{ color: "white" }}>
+                tutaj
+              </Link>
+            </u>{" "}
+            aby przejść do głównej strony
+          </Text>
+        </Inner>
+      </Container>
+      <Footer>Copyright © 2020 Patrycja Brzeskot</Footer>
+    </div>
+  )
+}
 
 const LayeredBox = styled.div``
 
@@ -45,30 +68,5 @@ const Footer = styled.footer`
   padding-top: 20px;
   font-size: 16px;
 `
-
-const NotFoundPage = () => {
-  return (
-    <div id="welcome-section">
-      <Container>
-        <Image />
-        <Inner>
-          <br />
-          <Name>Ups! Ta strona nie istnieje</Name>
-          <br />
-          <Text>
-            Kliknij{" "}
-            <u>
-              <Link to="/" style={{ color: "white" }}>
-                tutaj
-              </Link>
-            </u>{" "}
-            aby przejść do głównej strony
-          </Text>
-        </Inner>
-      </Container>
-      <Footer>Copyright © 2020 Patrycja Brzeskot</Footer>
-    </div>
-  )
-}
 
 export default NotFoundPage

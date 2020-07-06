@@ -4,24 +4,7 @@ import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 import { Container, Col, Row } from "react-bootstrap"
 
-// const Container = styled.div`
-//   line-height: 50px;
-//   text-align: center;
-//   padding: 50px;
-//   margin-left: 100px;
-//   margin-right: 100px;
-//   margin-bottom: 100px;
-// `
-
-const Text = styled.span`
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 25px;
-  max-width: 50%;
-  font-family: Lato;
-`
-
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <>
       <Container
@@ -55,4 +38,11 @@ const Contact = () => {
   )
 }
 
+const Text = styled.span`
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  max-width: 50%;
+  font-family: Lato;
+`
 export default Contact

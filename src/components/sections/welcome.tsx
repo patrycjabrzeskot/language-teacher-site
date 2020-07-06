@@ -1,8 +1,22 @@
 import React from "react"
-import Image from "../images/image"
+import Image from "../imageComponents/image"
 import styled from "styled-components"
 
-const LayeredBox = styled.div``
+const Welcome: React.FC = () => {
+  return (
+    <div id="welcome-section">
+      <Container>
+        <Image />
+        <Inner>
+          <br />
+          <Name>Kinga Brzeskot</Name>
+          <br />
+          <Text>Nauka języka szwedzkiego i norweskiego</Text>
+        </Inner>
+      </Container>
+    </div>
+  )
+}
 
 const Container = styled.div`
   position: relative;
@@ -31,21 +45,5 @@ const Text = styled.span`
   font-size: 30px;
   font-family: Lato;
 `
-
-const Welcome = () => {
-  return (
-    <div id="welcome-section">
-      <Container>
-        <Image />
-        <Inner>
-          <br />
-          <Name>Kinga Brzeskot</Name>
-          <br />
-          <Text>Nauka języka szwedzkiego i norweskiego</Text>
-        </Inner>
-      </Container>
-    </div>
-  )
-}
 
 export default Welcome

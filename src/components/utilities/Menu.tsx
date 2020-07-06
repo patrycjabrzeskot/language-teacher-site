@@ -1,46 +1,9 @@
 import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import "./sections/quote.css"
+import "../../styles/quote.css"
 
-const Container = styled.div`
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-right: 10px;
-  position: fixed !important;
-  z-index: 99;
-  height: 50px;
-  color: white;
-`
-
-const MenuItem = styled.li`
-  width: 25%;
-  cursor: pointer;
-  transition: letter-spacing 0.4s;
-  &:hover {
-    letter-spacing: 1px;
-  }
-`
-const ItemsWrapper = styled.ul`
-  width: 500px;
-  display: flex;
-  float: right;
-  list-style-type: none;
-  justifycontent: "space-evenly";
-  margin-top: 10px;
-`
-
-const Logo = styled.p`
-  display: flex;
-  float: left;
-  margin-left: 30px;
-  padding-top: 10px;
-  font-size: 25px;
-  font-family: LovedbytheKing-Regular;
-`
-
-const Menu = () => {
+const Menu: React.FC = () => {
   const [navBackground, setNavBackground] = useState(false)
   let navRef = useRef<boolean>()
   navRef.current = navBackground
@@ -93,5 +56,42 @@ const Menu = () => {
     </Container>
   )
 }
+
+const Container = styled.div`
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-right: 10px;
+  position: fixed !important;
+  z-index: 99;
+  height: 50px;
+  color: white;
+`
+
+const MenuItem = styled.li`
+  width: 25%;
+  cursor: pointer;
+  transition: letter-spacing 0.4s;
+  &:hover {
+    letter-spacing: 1px;
+  }
+`
+const ItemsWrapper = styled.ul`
+  width: 500px;
+  display: flex;
+  float: right;
+  list-style-type: none;
+  justifycontent: "space-evenly";
+  margin-top: 10px;
+`
+
+const Logo = styled.p`
+  display: flex;
+  float: left;
+  margin-left: 30px;
+  padding-top: 10px;
+  font-size: 25px;
+  font-family: LovedbytheKing-Regular;
+`
 
 export default Menu
