@@ -2,33 +2,10 @@ import React, { useState, useRef, useEffect } from "react"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import "../../styles/quote.css"
+import useMenuColor from "../utilities/useMenuColor"
 
 const Menu: React.FC = () => {
-  const [navBackground, setNavBackground] = useState(false)
-  let navRef = useRef<boolean>()
-  navRef.current = navBackground
-
-  useEffect(() => {
-    const section: HTMLElement | null = document.getElementById(
-      "welcome-section"
-    )
-    const handleScroll = () => {
-      if (section) {
-        const sectionSize = section.offsetHeight
-
-        let show = document.body.scrollTop > sectionSize - 50
-        if (navRef.current !== show) {
-          setNavBackground(show)
-        }
-      }
-    }
-
-    document.body.addEventListener("scroll", handleScroll)
-    return () => {
-      document.body.removeEventListener("scroll", handleScroll)
-    }
-  }, [setNavBackground, document.body.scrollTop])
-
+  const navBackground = useMenuColor()
   return (
     <Container
       style={{
