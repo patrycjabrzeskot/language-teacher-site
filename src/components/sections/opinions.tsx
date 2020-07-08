@@ -12,6 +12,7 @@ const Opinions: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    style: { paddingBottom: 25 },
   }
 
   return (
@@ -19,7 +20,7 @@ const Opinions: React.FC = () => {
       style={{ paddingTop: 100, paddingBottom: 100, fontFamily: "Lato" }}
       id="opinions-section"
     >
-      <Slider {...settings} style={{ paddingBottom: 25 }}>
+      <Slider {...settings}>
         <div>
           <Opinion
             name="Magda S."

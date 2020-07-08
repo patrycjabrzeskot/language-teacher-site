@@ -1,16 +1,17 @@
-import React, { useState, useRef, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import "../../styles/quote.css"
 import useMenuColor from "../utilities/useMenuColor"
 
 const Menu: React.FC = () => {
-  const navBackground = useMenuColor()
+  const navBackgroundColor = useMenuColor()
+
   return (
     <Container
       style={{
         transition: "500ms ease",
-        backgroundColor: navBackground ? "black" : "transparent",
+        backgroundColor: navBackgroundColor ? "black" : "transparent",
       }}
     >
       <Logo> KINGA BRZESKOT</Logo>

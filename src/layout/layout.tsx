@@ -7,10 +7,8 @@ import styled from "styled-components"
 const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <div>
-        <Menu />
-        {children}
-      </div>
+      <Menu />
+      {children}
       <Footer>Copyright © 2020 Patrycja Brzeskot</Footer>
     </>
   )
