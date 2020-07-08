@@ -47,11 +47,11 @@ const ImageGallery = () => {
   `)
 
   const myItems = Object.keys(data).map(gal => (
-    <>
+    <React.Fragment key={gal}>
       <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
         <Img fluid={data[gal].childImageSharp.fluid} />
       </Col>
-    </>
+    </React.Fragment>
   ))
 
   return <Row>{myItems}</Row>
