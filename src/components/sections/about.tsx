@@ -17,7 +17,6 @@ const About: React.FC = () => {
               >
                 <Title>O MNIE</Title>
                 <DescriptionContent>
-                  <br />
                   Mam na imię Kinga. Moją pasją są języki. Lubię się nią dzielić
                   przez nauczanie innych. Moje motto to "Iloma językami mówisz –
                   tyle razy żyjesz".
@@ -51,18 +50,19 @@ const Section = styled.div`
 
 const DescriptionContent = styled.div`
   font-family: Lato;
-  font-size: 18px;
-  line-height: 32px;
+  line-height: 2vw;
   margin: 15px 0;
   max-width: 500px;
   text-align: justify;
   text-justify: inter-word;
+  font-size: 1.2vw;
 `
 
 const Title = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
+  font-size: 1.2vw;
 `
 
 export default About
