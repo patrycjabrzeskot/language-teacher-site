@@ -22,6 +22,6 @@ const Footer = styled.footer`
   text-align: right;
   padding-right: 50px;
   padding-top: 20px;
-  font-size: 16px;
+  font-size: 0.9vw;
 `
 export default Layout
