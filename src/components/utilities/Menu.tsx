@@ -42,7 +42,8 @@ const Container = styled.div`
   margin-right: 10px;
   position: fixed !important;
   z-index: 99;
-  height: 50px;
+  // height: 50px;
+  height: 7vh;
   color: white;
 `
 
@@ -62,16 +63,18 @@ const ItemsWrapper = styled.ul`
   float: right;
   list-style-type: none;
   justifycontent: "space-evenly";
-  margin-top: 10px;
+  margin-top: 1.3vh;
+  line-height: 2.5vh;
 `
 
 const Logo = styled.p`
   display: flex;
   float: left;
   margin-left: 30px;
-  padding-top: 10px;
+  padding-top: 1.5vh;
   font-size: 1.7vmax;
   font-family: LovedbytheKing-Regular;
+  line-height: 3vh;
 `
 
 export default Menu

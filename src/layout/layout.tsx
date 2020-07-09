@@ -16,12 +16,12 @@ const Layout: React.FC = ({ children }) => {
 
 const Footer = styled.footer`
   background-color: #161426;
-  height: 60px;
+  height: 6vh;
+  line-height: 6vh;
   color: #edecf2;
   font-family: Lato;
   text-align: right;
-  padding-right: 50px;
-  padding-top: 20px;
+  padding-right: 5vh;
   font-size: 0.9vw;
 `
 export default Layout
