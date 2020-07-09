@@ -52,10 +52,12 @@ const MenuItem = styled.li`
   transition: letter-spacing 0.4s;
   &:hover {
     letter-spacing: 1px;
+    cursor: pointer;
   }
+  font-size: 1.2vmax;
 `
 const ItemsWrapper = styled.ul`
-  width: 500px;
+  width: 40%;
   display: flex;
   float: right;
   list-style-type: none;
@@ -68,7 +70,7 @@ const Logo = styled.p`
   float: left;
   margin-left: 30px;
   padding-top: 10px;
-  font-size: 25px;
+  font-size: 1.7vmax;
   font-family: LovedbytheKing-Regular;
 `
 

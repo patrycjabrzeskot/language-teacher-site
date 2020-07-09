@@ -22,15 +22,16 @@ const Quote: React.FC<QuoteProps> = (props: QuoteProps) => {
 const Container = styled.div`
   line-height: 80px;
   text-align: center;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 12%;
+  margin-right: 12%;
 `
 
 const Text = styled.span`
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  font-size: 40px;
+  // font-size: 40px;
+  font-size: 2.8vw;
   font-family: LovedbytheKing-Regular;
   max-width: 55%;
 `
@@ -44,7 +45,8 @@ const Author = styled.span`
   vertical-align: right;
   line-height: normal;
   font-weight: 300;
-  font-size: 30px;
+  // font-size: 30px;
+  font-size: 2vw;
   font-family: LovedbytheKing-Regular;
   margin-left: 300px;
 `
