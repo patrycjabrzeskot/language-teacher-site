@@ -12,7 +12,6 @@ const Opinions: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    style: { paddingBottom: 25 },
   }
 
   return (

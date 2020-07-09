@@ -18,6 +18,7 @@ This site was created for swedish and norwegian language teacher - Kinga. Main p
 - React 6.14.4
 - Gatsby 6.14.4
 - React-bootstrap 1.0.1
+- React-dom 16.13.1
 
 ## Setup
 
