@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import ImageProfile from "../imageComponents/ImageProfile"
 import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
+import styled from "styled-components"
 
 export interface OpinionProps {
   picture: string
@@ -15,19 +16,22 @@ const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
     <>
       <Container style={{ paddingLeft: 50 }}>
         <Row>
-          <Col xs={3} md={3}>
+          <Col xs={2} md={2}>
             <ImageProfile picture={props.picture} />
           </Col>
+          <Col xs={1} md={1}>
+            {" "}
+          </Col>
           <Col xs={7} md={7}>
-            <h2>{props.name}</h2>
+            <Name>{props.name}</Name>
             <p>
-              <Icon name="star" color="yellow" />
-              <Icon name="star" color="yellow" />
-              <Icon name="star" color="yellow" />
-              <Icon name="star" color="yellow" />
-              <Icon name="star" color="yellow" />
+              <Icon name="star" color="yellow" size="small" />
+              <Icon name="star" color="yellow" size="small" />
+              <Icon name="star" color="yellow" size="small" />
+              <Icon name="star" color="yellow" size="small" />
+              <Icon name="star" color="yellow" size="small" />
             </p>
-            <p>{props.desc}</p>
+            <Text>{props.desc}</Text>
           </Col>
         </Row>
       </Container>
@@ -35,4 +39,13 @@ const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
   )
 }
 
+const Name = styled.h2`
+  font-family: Lato;
+  font-size: 1.2vw;
+`
+
+const Text = styled.p`
+  font-family: Lato;
+  font-size: 1vw;
+`
 export default Opinion
