@@ -4,7 +4,6 @@ import ImageProfile from "../imageComponents/ImageProfile"
 import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 import styled from "styled-components"
-import Media from "react-media"
 
 export interface OpinionProps {
   picture: string
@@ -13,7 +12,6 @@ export interface OpinionProps {
 }
 
 const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
-  const color = "blue"
   return (
     <>
       <Container style={{ paddingLeft: 50 }}>
@@ -26,46 +24,11 @@ const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
           </Col>
           <Col sm={7} xs={7} md={7}>
             <Name>{props.name}</Name>
-            <Media
-              queries={{
-                small: "(max-width: 599px)",
-                medium: "(min-width: 600px) and (max-width: 1199px)",
-                large: "(min-width: 1200px)",
-              }}
-            >
-              {matches => (
-                <>
-                  {matches.small && (
-                    <>
-                      <Icon name="star" color="yellow" size="mini" />
-                      <Icon name="star" color="yellow" size="mini" />
-                      <Icon name="star" color="yellow" size="mini" />
-                      <Icon name="star" color="yellow" size="mini" />
-                      <Icon name="star" color="yellow" size="mini" />
-                    </>
-                  )}
-                  {matches.medium && (
-                    <>
-                      <Icon name="star" color="yellow" size="tiny" />
-                      <Icon name="star" color="yellow" size="tiny" />
-                      <Icon name="star" color="yellow" size="tiny" />
-                      <Icon name="star" color="yellow" size="tiny" />
-                      <Icon name="star" color="yellow" size="tiny" />
-                    </>
-                  )}
-                  {matches.large && (
-                    <>
-                      <Icon name="star" color="yellow" size="small" />
-                      <Icon name="star" color="yellow" size="small" />
-                      <Icon name="star" color="yellow" size="small" />
-                      <Icon name="star" color="yellow" size="small" />
-                      <Icon name="star" color="yellow" size="small" />
-                    </>
-                  )}
-                </>
-              )}
-            </Media>
-
+            <Icon name="star" color="yellow" size="small" />
+            <Icon name="star" color="yellow" size="small" />
+            <Icon name="star" color="yellow" size="small" />
+            <Icon name="star" color="yellow" size="small" />
+            <Icon name="star" color="yellow" size="small" />
             <Text>{props.desc}</Text>
           </Col>
         </Row>
