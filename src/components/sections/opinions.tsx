@@ -17,7 +17,11 @@ const Opinions: React.FC = () => {
 
   return (
     <Container
-      style={{ paddingTop: 100, paddingBottom: 100, fontFamily: "Lato" }}
+      style={{
+        paddingTop: 100,
+        paddingBottom: 100,
+        fontFamily: "Lato",
+      }}
       id="opinions-section"
     >
       <Slider {...settings}>

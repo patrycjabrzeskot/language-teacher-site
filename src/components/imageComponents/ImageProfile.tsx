@@ -9,8 +9,8 @@ export interface ImageProps {
 export const squareImage = graphql`
   fragment squareImage on File {
     childImageSharp {
-      fixed(width: 150, height: 150) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 100, maxHeight: 100) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -37,7 +37,7 @@ const ImageProfile = (props: ImageProps) => {
     }
   `)
 
-  return <Img fixed={data[props.picture].childImageSharp.fixed} />
+  return <Img fluid={data[props.picture].childImageSharp.fluid} />
 }
 
 export default ImageProfile
