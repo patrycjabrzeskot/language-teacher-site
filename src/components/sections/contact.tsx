@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
           paddingLeft: 80,
         }}
       >
-        <hr />
+        <hr style={{ marginBottom: 20 }} />
         <Row>
           <Col xs={6} md={6}>
             <Title>Masz pytania?</Title>
@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
           </Col>
           <Col xs={6} md={6}>
             <TextContact>
-              <br />
+              {/* <br /> */}
               <Icon name="envelope" />
               &nbsp; contact@gmail.com
             </TextContact>
@@ -45,9 +45,9 @@ const Contact: React.FC = () => {
 const Title = styled.h2`
   font-size: 40px;
   padding-bottom: 20px;
-  font-size: 1.8vw;
+  font-size: 2vw;
   font-family: Lato;
-  padding-top: 6.5vh;
+  line-height: 3vw;
 `
 
 const Text = styled.span`
