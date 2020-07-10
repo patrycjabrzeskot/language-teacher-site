@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../layout/layout"
-import GlobalStyle from "../styles/globalStyles"
 import Welcome from "../components/sections/welcome"
 import About from "../components/sections/about"
 import Quote from "../components/sections/quote"
@@ -26,7 +25,6 @@ const Index: React.FC = () => {
       <Opinions />
       <Contact />
       <ImageGallery />
-      <GlobalStyle />
     </Layout>
   )
 }
