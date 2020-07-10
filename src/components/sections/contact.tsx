@@ -4,24 +4,7 @@ import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 import { Container, Col, Row } from "react-bootstrap"
 
-// const Container = styled.div`
-//   line-height: 50px;
-//   text-align: center;
-//   padding: 50px;
-//   margin-left: 100px;
-//   margin-right: 100px;
-//   margin-bottom: 100px;
-// `
-
-const Text = styled.span`
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 25px;
-  max-width: 50%;
-  font-family: Lato;
-`
-
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <>
       <Container
@@ -33,26 +16,52 @@ const Contact = () => {
           paddingLeft: 80,
         }}
       >
-        <hr style={{ marginBottom: 50 }} />
+        <hr style={{ marginBottom: 20 }} />
         <Row>
           <Col xs={6} md={6}>
-            <h2 style={{ fontSize: 40, paddingBottom: 20 }}>Masz pytania?</h2>
-            Napisz do mnie a postaram się jak najszybciej odpowiedzieć.
+            <Title>Masz pytania?</Title>
+            <Text>
+              Napisz do mnie a postaram się jak najszybciej odpowiedzieć.
+            </Text>
           </Col>
           <Col xs={6} md={6}>
-            <Text>
-              <Icon name="envelope" /> contact@gmail.com
-            </Text>
+            <TextContact>
+              {/* <br /> */}
+              <Icon name="envelope" />
+              &nbsp; contact@gmail.com
+            </TextContact>
             <br />
             <br />
-            <Text>
-              <Icon name="phone" /> 123 123 123
-            </Text>
+            <TextContact>
+              <Icon name="phone" />
+              &nbsp; 123 123 123
+            </TextContact>
           </Col>
         </Row>
       </Container>
     </>
   )
 }
+const Title = styled.h2`
+  font-size: 40px;
+  padding-bottom: 20px;
+  font-size: 2vw;
+  font-family: Lato;
+  line-height: 3vw;
+`
 
+const Text = styled.span`
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.2vw;
+  font-family: Lato;
+  line-height: 2vw;
+`
+
+const TextContact = styled.span`
+  vertical-align: middle;
+  font-size: 1.5vw;
+  font-family: Lato;
+  line-height: 3vw;
+`
 export default Contact

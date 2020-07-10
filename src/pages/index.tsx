@@ -7,9 +7,9 @@ import Quote from "../components/sections/quote"
 import Skills from "../components/sections/skills"
 import Opinions from "../components/sections/opinions"
 import Contact from "../components/sections/contact"
-import ImageGallery from "../components/images/gallery-image"
+import ImageGallery from "../components/imageComponents/ImageGallery"
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
       <Welcome />

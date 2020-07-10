@@ -6,11 +6,11 @@ export interface ImageProps {
   picture: string
 }
 
-export const circleImage = graphql`
-  fragment circleImage on File {
+export const squareImage = graphql`
+  fragment squareImage on File {
     childImageSharp {
-      fixed(width: 150, height: 150) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 100, maxHeight: 100) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -20,24 +20,24 @@ const ImageProfile = (props: ImageProps) => {
   const data = useStaticQuery(graphql`
     query {
       profile1: file(relativePath: { eq: "profile1.jpg" }) {
-        ...circleImage
+        ...squareImage
       }
       profile2: file(relativePath: { eq: "profile2.jpg" }) {
-        ...circleImage
+        ...squareImage
       }
       profile3: file(relativePath: { eq: "profile3.jpg" }) {
-        ...circleImage
+        ...squareImage
       }
       profile4: file(relativePath: { eq: "profile4.jpg" }) {
-        ...circleImage
+        ...squareImage
       }
       profile5: file(relativePath: { eq: "profile5.jpg" }) {
-        ...circleImage
+        ...squareImage
       }
     }
   `)
 
-  return <Img fixed={data[props.picture].childImageSharp.fixed} />
+  return <Img fluid={data[props.picture].childImageSharp.fluid} />
 }
 
 export default ImageProfile

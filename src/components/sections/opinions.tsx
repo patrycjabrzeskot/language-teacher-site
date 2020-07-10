@@ -3,9 +3,9 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { Container } from "react-bootstrap"
-import Opinion from "../opinion"
+import Opinion from "../utilities/Opinion"
 
-const Opinions = () => {
+const Opinions: React.FC = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -16,10 +16,14 @@ const Opinions = () => {
 
   return (
     <Container
-      style={{ paddingTop: 100, paddingBottom: 100, fontFamily: "Lato" }}
+      style={{
+        paddingTop: 100,
+        paddingBottom: 100,
+        fontFamily: "Lato",
+      }}
       id="opinions-section"
     >
-      <Slider {...settings} style={{ paddingBottom: 25 }}>
+      <Slider {...settings}>
         <div>
           <Opinion
             name="Magda S."

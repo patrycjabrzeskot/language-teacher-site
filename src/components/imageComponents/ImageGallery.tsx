@@ -46,15 +46,15 @@ const ImageGallery = () => {
     }
   `)
 
-  const myitems = Object.keys(data).map(gal => (
-    <>
+  const myItems = Object.keys(data).map(gal => (
+    <React.Fragment key={gal}>
       <Col style={{ paddingLeft: 0, paddingRight: 0 }}>
         <Img fluid={data[gal].childImageSharp.fluid} />
       </Col>
-    </>
+    </React.Fragment>
   ))
 
-  return <Row>{myitems}</Row>
+  return <Row>{myItems}</Row>
 }
 
 export default ImageGallery

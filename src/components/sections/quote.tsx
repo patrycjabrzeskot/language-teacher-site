@@ -1,20 +1,37 @@
 import React from "react"
-import Image from "../images/image"
+import Image from "../imageComponents/image"
 import styled from "styled-components"
-import "./quote.css"
+import "../../styles/quote.css"
 
+export interface QuoteProps {
+  text: string
+  author: string
+}
+
+const Quote: React.FC<QuoteProps> = (props: QuoteProps) => {
+  return (
+    <Container>
+      <Inner>
+        <Text>{props.text}</Text>
+        <br />
+        <Author>- {props.author}</Author>
+      </Inner>
+    </Container>
+  )
+}
 const Container = styled.div`
   line-height: 80px;
   text-align: center;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 12%;
+  margin-right: 12%;
 `
 
 const Text = styled.span`
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  font-size: 40px;
+  // font-size: 40px;
+  font-size: 2.8vw;
   font-family: LovedbytheKing-Regular;
   max-width: 55%;
 `
@@ -28,26 +45,10 @@ const Author = styled.span`
   vertical-align: right;
   line-height: normal;
   font-weight: 300;
-  font-size: 30px;
+  // font-size: 30px;
+  font-size: 2vw;
   font-family: LovedbytheKing-Regular;
   margin-left: 300px;
 `
-
-export interface QuoteProps {
-  text: string
-  author: string
-}
-
-const Quote = props => {
-  return (
-    <Container>
-      <Inner>
-        <Text>{props.text}</Text>
-        <br />
-        <Author>- {props.author}</Author>
-      </Inner>
-    </Container>
-  )
-}
 
 export default Quote
