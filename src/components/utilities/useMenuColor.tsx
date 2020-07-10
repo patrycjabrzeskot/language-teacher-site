@@ -31,7 +31,7 @@ const useMenuColor = () => {
         document.body.removeEventListener("scroll", handleScroll)
       }
     }
-  }, [setNavBackground, document.body.scrollTop])
+  }, [setNavBackground])
 
   return navBackground
 }
