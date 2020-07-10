@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "../imageComponents/Image"
+import Image from "../imageComponents/image"
 import styled from "styled-components"
 
 const Welcome: React.FC = () => {
