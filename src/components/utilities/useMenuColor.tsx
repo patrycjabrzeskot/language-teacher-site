@@ -6,6 +6,10 @@ const useMenuColor = () => {
   navRef.current = navBackground
 
   useEffect(() => {
+    if (typeof window === "undefined" || !window.document) {
+      console.log(`bailing out of the useeffect. Going to continue to render`)
+      return
+    }
     const section: HTMLElement | null = document.getElementById(
       "welcome-section"
     )
