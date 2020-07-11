@@ -533,6 +533,7 @@ li {
   cursor: pointer;
   transition: letter-spacing 0.4s;
   font-size: 1.2vmax;
+  margin-top: 14px;
 }
 ol li {
   padding-left: 0;
@@ -676,4 +677,5 @@ h4 {
   font-family: LovedbytheKing-Regular !important;
   line-height: 3vh !important;
   font-weight: 200 !important;
+  margin-top: 8px !important;
 }

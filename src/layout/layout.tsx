@@ -5,23 +5,24 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import styled from "styled-components"
 
 const Layout: React.FC = ({ children }) => {
+  const myFooter = {
+    backgroundColor: "#161426",
+    height: 50,
+    lineHeight: 3,
+    color: "#edecf2",
+    fontFamily: "Lato",
+    paddingRight: 10,
+    fontSize: 16,
+  }
   return (
     <>
       <Menu />
       {children}
-      <Footer>Copyright © 2020 Patrycja Brzeskot</Footer>
+      <footer style={{ ...myFooter, textAlign: "right" }}>
+        Copyright © 2020 Patrycja Brzeskot
+      </footer>
     </>
   )
 }
 
-const Footer = styled.footer`
-  background-color: #161426;
-  height: 6vh;
-  line-height: 6vh;
-  color: #edecf2;
-  font-family: Lato;
-  text-align: right;
-  padding-right: 5vh;
-  font-size: 0.9vw;
-`
 export default Layout
