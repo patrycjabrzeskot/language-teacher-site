@@ -1,12 +1,11 @@
 import React from "react"
 import SectionImage from "../imageComponents/SectionImage"
-import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 
 const About: React.FC = () => {
   return (
     <>
-      <SectionAbout id="about-section">
+      <div style={section} id="about-section">
         <Container>
           <Row>
             <Col>
@@ -15,8 +14,8 @@ const About: React.FC = () => {
                 data-sal-duration="2000"
                 data-sal-easing="ease"
               >
-                <TitleAbout>O MNIE</TitleAbout>
-                <DescriptionContentAbout>
+                <h1 style={title}>O MNIE</h1>
+                <div style={descriptionContent}>
                   Mam na imię Kinga. Moją pasją są języki. Lubię się nią dzielić
                   przez nauczanie innych. Moje motto to "Iloma językami mówisz –
                   tyle razy żyjesz".
@@ -29,7 +28,7 @@ const About: React.FC = () => {
                   <br />
                   Prywatnie lubię koty, herbatę i podróże - zwłaszcza do
                   skandynawii!
-                </DescriptionContentAbout>
+                </div>
               </div>
             </Col>
             <Col style={{ paddingLeft: 50 }}>
@@ -37,32 +36,30 @@ const About: React.FC = () => {
             </Col>
           </Row>
         </Container>
-      </SectionAbout>
+      </div>
     </>
   )
 }
 
-const SectionAbout = styled.div`
-  display: flex;
-  padding-top: 100px;
-  padding-bottom: 100px;
-`
+const section = {
+  display: "flex",
+  paddingTop: 100,
+  paddingBottom: 100,
+}
 
-const DescriptionContentAbout = styled.div`
-  font-family: Lato;
-  line-height: 2vw;
-  margin: 15px 0;
-  max-width: 500px;
-  text-align: justify;
-  text-justify: inter-word;
-  font-size: 1.2vw;
-`
+const descriptionContent = {
+  fontFamily: "Lato",
+  lineHeight: 2,
+  margin: 15,
+  maxWidth: 500,
+  fontSize: 18,
+}
 
-const TitleAbout = styled.h1`
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.2vw;
-`
+const title = {
+  fontFamily: "Lato",
+  fontStyle: "normal",
+  fontWeight: 300,
+  fontSize: 18,
+}
 
 export default About

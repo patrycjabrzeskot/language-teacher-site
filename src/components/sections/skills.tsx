@@ -1,20 +1,20 @@
 import React from "react"
 import SectionImage from "../imageComponents/SectionImage"
-import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
 
 const Skills: React.FC = () => {
   return (
     <>
-      <Section id="skills-section">
+      <div style={section} id="skills-section">
         <Container>
           <Row>
             <Col>
               <SectionImage picture="skills" />
             </Col>
             <Col style={{ paddingLeft: 50 }}>
-              <Title>UMIEJĘTNOŚCI</Title>
-              <DescriptionContent
+              <h1 style={title}>UMIEJĘTNOŚCI</h1>
+              <div
+                style={descriptionContent}
                 data-sal="slide-up"
                 data-sal-duration="2000"
                 data-sal-easing="ease"
@@ -31,38 +31,34 @@ const Skills: React.FC = () => {
                 lub poziom zaawansowany. Prowadzę "rozmówki". Jeśli masz pytania
                 lub pomysły napisz do mnie.
                 <br /> Lekcje indywidualne nauczam osobiście lub online.
-              </DescriptionContent>
+              </div>
             </Col>
           </Row>
         </Container>
-      </Section>
+      </div>
     </>
   )
 }
 
-const Section = styled.div`
-  display: flex;
-  padding-top: 100px;
-  padding-bottom: 100px;
-`
+const section = {
+  display: "flex",
+  paddingTop: 100,
+  paddingBottom: 100,
+}
 
-const DescriptionContent = styled.div`
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 2vw;
-  margin: 15px 0;
-  max-width: 500px;
-  text-align: justify;
-  text-justify: inter-word;
-  font-size: 1.1vw;
-`
+const descriptionContent = {
+  fontFamily: "Lato",
+  lineHeight: 2,
+  margin: 15,
+  maxWidth: 500,
+  fontSize: 18,
+}
 
-const Title = styled.h1`
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.2vw;
-`
+const title = {
+  fontFamily: "Lato",
+  fontStyle: "normal",
+  fontWeight: 300,
+  fontSize: 18,
+}
 
 export default Skills

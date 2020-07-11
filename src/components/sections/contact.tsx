@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 import { Container, Col, Row } from "react-bootstrap"
@@ -19,49 +18,40 @@ const Contact: React.FC = () => {
         <hr style={{ marginBottom: 20 }} />
         <Row>
           <Col xs={6} md={6}>
-            <Title>Masz pytania?</Title>
-            <Text>
+            <h2>Masz pytania?</h2>
+            <span style={text}>
               Napisz do mnie a postaram się jak najszybciej odpowiedzieć.
-            </Text>
+            </span>
           </Col>
           <Col xs={6} md={6}>
-            <TextContact>
-              {/* <br /> */}
+            <span style={textContact}>
               <Icon name="envelope" />
               &nbsp; contact@gmail.com
-            </TextContact>
+            </span>
             <br />
             <br />
-            <TextContact>
+            <span style={textContact}>
               <Icon name="phone" />
               &nbsp; 123 123 123
-            </TextContact>
+            </span>
           </Col>
         </Row>
       </Container>
     </>
   )
 }
-const Title = styled.h2`
-  font-size: 40px;
-  padding-bottom: 20px;
-  font-size: 2vw;
-  font-family: Lato;
-  line-height: 3vw;
-`
 
-const Text = styled.span`
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 1.2vw;
-  font-family: Lato;
-  line-height: 2vw;
-`
+const text = {
+  verticalAlign: "middle",
+  fontSize: 18,
+  fontFamily: "Lato",
+  lineHeight: 4,
+}
 
-const TextContact = styled.span`
-  vertical-align: middle;
-  font-size: 1.5vw;
-  font-family: Lato;
-  line-height: 3vw;
-`
+const textContact = {
+  verticalAlign: "middle",
+  fontSize: 18,
+  fontFamily: "Lato",
+  lineHeight: 2,
+}
 export default Contact

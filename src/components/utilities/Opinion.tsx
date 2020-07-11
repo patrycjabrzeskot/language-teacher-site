@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap"
 import ImageProfile from "../imageComponents/ImageProfile"
 import { Icon } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
-import styled from "styled-components"
 
 export interface OpinionProps {
   picture: string
@@ -23,13 +22,13 @@ const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
             {" "}
           </Col>
           <Col sm={7} xs={7} md={7}>
-            <Name>{props.name}</Name>
+            <h2 style={name}>{props.name}</h2>
             <Icon name="star" color="yellow" size="small" />
             <Icon name="star" color="yellow" size="small" />
             <Icon name="star" color="yellow" size="small" />
             <Icon name="star" color="yellow" size="small" />
             <Icon name="star" color="yellow" size="small" />
-            <Text>{props.desc}</Text>
+            <p style={text}>{props.desc}</p>
           </Col>
         </Row>
       </Container>
@@ -37,14 +36,14 @@ const Opinion: React.FC<OpinionProps> = (props: OpinionProps) => {
   )
 }
 
-const Name = styled.h2`
-  font-family: Lato;
-  font-size: 1.2vw;
-  margin-bottom: 5px;
-`
+const name = {
+  fontFamily: "Lato",
+  //fontSize: "1.2%",
+  marginBottom: 5,
+}
 
-const Text = styled.p`
-  font-family: Lato;
-  font-size: 1vw;
-`
+const text = {
+  fontFamily: "Lato",
+  fontSize: 15,
+}
 export default Opinion
