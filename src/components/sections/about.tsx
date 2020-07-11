@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap"
 const About: React.FC = () => {
   return (
     <>
-      <Section id="about-section">
+      <SectionAbout id="about-section">
         <Container>
           <Row>
             <Col>
@@ -15,8 +15,8 @@ const About: React.FC = () => {
                 data-sal-duration="2000"
                 data-sal-easing="ease"
               >
-                <Title>O MNIE</Title>
-                <DescriptionContent>
+                <TitleAbout>O MNIE</TitleAbout>
+                <DescriptionContentAbout>
                   Mam na imię Kinga. Moją pasją są języki. Lubię się nią dzielić
                   przez nauczanie innych. Moje motto to "Iloma językami mówisz –
                   tyle razy żyjesz".
@@ -29,7 +29,7 @@ const About: React.FC = () => {
                   <br />
                   Prywatnie lubię koty, herbatę i podróże - zwłaszcza do
                   skandynawii!
-                </DescriptionContent>
+                </DescriptionContentAbout>
               </div>
             </Col>
             <Col style={{ paddingLeft: 50 }}>
@@ -37,18 +37,18 @@ const About: React.FC = () => {
             </Col>
           </Row>
         </Container>
-      </Section>
+      </SectionAbout>
     </>
   )
 }
 
-const Section = styled.div`
+const SectionAbout = styled.div`
   display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
 `
 
-const DescriptionContent = styled.div`
+const DescriptionContentAbout = styled.div`
   font-family: Lato;
   line-height: 2vw;
   margin: 15px 0;
@@ -58,7 +58,7 @@ const DescriptionContent = styled.div`
   font-size: 1.2vw;
 `
 
-const Title = styled.h1`
+const TitleAbout = styled.h1`
   font-family: Lato;
   font-style: normal;
   font-weight: 300;

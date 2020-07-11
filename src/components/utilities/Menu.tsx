@@ -42,7 +42,6 @@ const Container = styled.div`
   margin-right: 10px;
   position: fixed !important;
   z-index: 99;
-  // height: 50px;
   height: 7vh;
   color: white;
 `
