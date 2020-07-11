@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+//import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import "../../styles/quote.css"
 import useMenuColor from "../utilities/useMenuColor"
@@ -8,72 +8,35 @@ const Menu: React.FC = () => {
   const navBackgroundColor = useMenuColor()
 
   return (
-    <Container
+    <div
       style={{
         transition: "500ms ease",
         backgroundColor: navBackgroundColor ? "black" : "transparent",
+        top: 0,
+        left: 0,
+        right: 0,
+        marginRight: 10,
+        position: "fixed",
+        zIndex: 99,
+        height: "7%",
+        color: "white",
       }}
     >
-      <Logo> KINGA BRZESKOT</Logo>
-      <ItemsWrapper>
-        <MenuItem onClick={() => scrollTo("#about-section")}>O mnie</MenuItem>
-        <MenuItem
+      <h4> KINGA BRZESKOT</h4>
+      <ul>
+        <li onClick={() => scrollTo("#about-section")}>O mnie</li>
+        <li
           onClick={() => {
             scrollTo("#skills-section")
           }}
         >
           Umiejętności
-        </MenuItem>
-        <MenuItem onClick={() => scrollTo("#opinions-section")}>
-          Opinie
-        </MenuItem>
-        <MenuItem onClick={() => scrollTo("#contact-section")}>
-          Kontakt
-        </MenuItem>
-      </ItemsWrapper>
-    </Container>
+        </li>
+        <li onClick={() => scrollTo("#opinions-section")}>Opinie</li>
+        <li onClick={() => scrollTo("#contact-section")}>Kontakt</li>
+      </ul>
+    </div>
   )
 }
-
-const Container = styled.div`
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-right: 10px;
-  position: fixed !important;
-  z-index: 99;
-  height: 7vh;
-  color: white;
-`
-
-const MenuItem = styled.li`
-  width: 25%;
-  cursor: pointer;
-  transition: letter-spacing 0.4s;
-  &:hover {
-    letter-spacing: 1px;
-    cursor: pointer;
-  }
-  font-size: 1.2vmax;
-`
-const ItemsWrapper = styled.ul`
-  width: 40%;
-  display: flex;
-  float: right;
-  list-style-type: none;
-  justifycontent: "space-evenly";
-  margin-top: 1.3vh;
-  line-height: 2.5vh;
-`
-
-const Logo = styled.p`
-  display: flex;
-  float: left;
-  margin-left: 30px;
-  padding-top: 1.5vh;
-  font-size: 1.7vmax;
-  font-family: LovedbytheKing-Regular;
-  line-height: 3vh;
-`
 
 export default Menu

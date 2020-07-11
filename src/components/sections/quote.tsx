@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import "../../styles/quote.css"
 
 export interface QuoteProps {
@@ -9,44 +8,40 @@ export interface QuoteProps {
 
 const Quote: React.FC<QuoteProps> = (props: QuoteProps) => {
   return (
-    <Container>
-      <Inner>
-        <Text>{props.text}</Text>
+    <div
+      style={{
+        lineHeight: 2,
+        textAlign: "center",
+        marginLeft: "12%",
+        marginRight: "12%",
+      }}
+    >
+      <div style={inner}>
+        <span style={text}>{props.text}</span>
         <br />
-        <Author>- {props.author}</Author>
-      </Inner>
-    </Container>
+        <span style={author}>- {props.author}</span>
+      </div>
+    </div>
   )
 }
-const Container = styled.div`
-  line-height: 80px;
-  text-align: center;
-  margin-left: 12%;
-  margin-right: 12%;
-`
 
-const Text = styled.span`
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
-  font-size: 2.8vw;
-  font-family: LovedbytheKing-Regular;
-  max-width: 55%;
-`
+const text = {
+  display: "inline-block",
+  verticalAlign: "middle",
+  fontSize: 40,
+  fontFamily: "LovedbytheKing-Regular",
+  maxWidth: "55%",
+}
 
-const Inner = styled.div`
-  border: 1px solid #000;
-  padding-top: 20px;
-`
-const Author = styled.span`
-  display: inline-block;
-  vertical-align: right;
-  line-height: normal;
-  font-weight: 300;
-  // font-size: 30px;
-  font-size: 2vw;
-  font-family: LovedbytheKing-Regular;
-  margin-left: 300px;
-`
+const inner = { border: "1px solid black", paddingTop: 20 }
+
+const author = {
+  verticalAlign: "right",
+  lineHeight: "normal",
+  fontWeight: 300,
+  fontSize: 24,
+  fontFamily: "LovedbytheKing-Regular",
+  marginLeft: 300,
+}
 
 export default Quote

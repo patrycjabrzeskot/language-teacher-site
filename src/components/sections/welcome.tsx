@@ -1,57 +1,48 @@
 import React from "react"
 import Image from "../imageComponents/image"
-import styled from "styled-components"
 
 const Welcome: React.FC = () => {
+  const outer = {
+    //position: "absolute",
+    border: "1px solid white",
+    marginTop: "5%",
+    //textAlign: "center",
+    color: "white",
+    display: "inline-block",
+    verticalAlign: "middle",
+    lineHeight: 2,
+    width: "60%",
+    height: "50%",
+    left: "20%",
+    top: "15%",
+  }
+
+  const inner = {
+    marginTop: "10%",
+    display: "block",
+    height: "50%",
+  }
+
   return (
     <div id="welcome-section">
-      <Container>
+      <div style={{ position: "relative", width: "100%", textAlign: "center" }}>
         <Image />
-        <Outer>
-          <Inner>
-            <Name>Kinga Brzeskot </Name>
+        <div style={{ ...outer, position: "absolute", textAlign: "center" }}>
+          <div style={inner}>
+            <span
+              style={{ fontSize: 80, fontFamily: "LovedbytheKing-Regular" }}
+            >
+              Kinga Brzeskot{" "}
+            </span>
             <br />
-            <Text>Nauka języka szwedzkiego i norweskiego</Text>
-          </Inner>
-        </Outer>
-      </Container>
+            <span style={{ fontSize: 26, fontFamily: "Lato" }}>
+              Nauka języka szwedzkiego i norweskiego
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
-
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-  text-align: center;
-`
-const Outer = styled.div`
-  position: absolute;
-  border: 1px solid white;
-  margin-top: 5%;
-  text-align: center;
-  color: white;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 5vw;
-  width: 60%;
-  height: 50%;
-  left: 20%;
-  top: 15%;
-`
-
-const Inner = styled.div`
-  margin-top: 10%;
-  display: block;
-  height: 50%;
-`
-
-const Name = styled.span`
-  font-size: 6vw;
-  font-family: LovedbytheKing-Regular;
-`
-const Text = styled.span`
-  font-size: 2vw;
-  font-family: Lato;
-`
 
 export default Welcome
