@@ -1,5 +1,4 @@
 import React from "react"
-import Image from "../imageComponents/image"
 import styled from "styled-components"
 import "../../styles/quote.css"
 
@@ -30,7 +29,6 @@ const Text = styled.span`
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
-  // font-size: 40px;
   font-size: 2.8vw;
   font-family: LovedbytheKing-Regular;
   max-width: 55%;
