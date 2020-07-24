@@ -6,12 +6,17 @@
 ## Table of contents
 
 - [General info](#general-info)
+- [Demo](#demo)
 - [Technologies](#technologies)
 - [Setup](#setup)
 
 ## General info
 
 This site was created for swedish and norwegian language teacher - Kinga. Main purpose of this page is for Kinga to introduce herself for potencial students, represent her skills and encourage to contact her.
+
+## Demo
+
+You can find this working page at: https://learningswedishandnorwegian.netlify.app/
 
 ## Technologies
 
